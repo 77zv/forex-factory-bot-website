@@ -1,75 +1,49 @@
-import { signIn, signOut, useSession } from "next-auth/react";
+import {signIn, signOut, useSession} from "next-auth/react";
 import Link from "next/link";
 
-import { api } from "~/utils/api";
+import {api} from "~/utils/api";
 import Layout from "~/pages/components/layout";
 
 export default function Home() {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
+    const hello = api.example.hello.useQuery({text: "from tRPC"});
 
-  return (
-    <Layout name={"HomePage"} title={"Home"} content={"HomePage for ForexFactory discord bot website."}>
-      <main className=" flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-          </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">First Steps →</h3>
-              <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
-              </div>
-            </Link>
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-              href="https://create.t3.gg/en/introduction"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">Documentation →</h3>
-              <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
-              </div>
-            </Link>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-white">
-              {hello.data ? hello.data.greeting : "Loading tRPC query..."}
-            </p>
-            <AuthShowcase />
-          </div>
-        </div>
-      </main>
-    </Layout>
-  );
-}
-
-function AuthShowcase() {
-  const { data: sessionData } = useSession();
-
-  const { data: secretMessage } = api.example.getSecretMessage.useQuery(
-    undefined, // no input
-    { enabled: sessionData?.user !== undefined }
-  );
-
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-center text-2xl text-white">
-        {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
-        {secretMessage && <span> - {secretMessage}</span>}
-      </p>
-      <button
-        className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
-        onClick={sessionData ? () => void signOut() : () => void signIn()}
-      >
-        {sessionData ? "Sign out" : "Sign in"}
-      </button>
-    </div>
-  );
+    return (
+        <Layout name={"HomePage"} title={"Home"} content={"HomePage for ForexFactory discord bot website."}>
+            <div className={"relative overflow-hidden"}>
+                <main>
+                    {/* Banner */}
+                    <div className={"bg-gray-800 pt-10 mb-10 sm:pt-16 lg:overflow-hidden lg:mb-0 lg:pt-8 lg:pb-14"}>
+                        <div className={"mx-auto max-w-7xl lg:px-8"}>
+                            <div className={"lg:grid lg:grid-cols-2 lg:gap-20"}>
+                                <div className={"mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left"}>
+                                   <div className={"lg:py-24"}>
+                                       <h1 className={"text-4xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl"}>
+                                           <span className={"block"}>Be Informed About</span>
+                                           <span className={"block text-blue-500"}>Economic News</span>
+                                           <span className={"block"}>With ForexFactory
+                                               <span className={"text-white"}>.</span>
+                                           </span>
+                                       </h1>
+                                       <p className={"mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"}>
+                                             ForexFactory is a discord bot that provides you with the latest economic news and events straight to your discord server.
+                                       </p>
+                                       <div className={"mt-10 sm:mt-12"}>
+                                           <Link href={"https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"}
+                                                 className={"font-semibold text-lg text-center w-full block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg px-5 py-2.5 m-auto dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}>
+                                               Get the Latest News Now
+                                           </Link>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div className={"hidden lg:flex items-center justify-center"}>
+                                    <img className={"w-3/5"} src={"./forexfactory-logo.png"} alt={"ForexFactory Logo"}/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* more stuff */}
+                </main>
+            </div>
+        </Layout>
+    );
 }
