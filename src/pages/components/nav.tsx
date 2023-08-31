@@ -9,7 +9,7 @@ type Tab = {
 }
 const tabs: Tab[] = [
     {name: "Home", href: "/"},
-    {name: "Invite", href: "/Invite"},
+    {name: "Invite", href: "/invite"},
     {name: "Documentation", href: "/commands"},
     {name: "Support", href: "/support"},
     {name: "Premium", href: "/Premium"},
