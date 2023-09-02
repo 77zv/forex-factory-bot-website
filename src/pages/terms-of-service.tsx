@@ -1,5 +1,4 @@
 import Layout from "~/pages/components/layout";
-import {ReactNode} from "react";
 
 const TermsOfService = () => {
 
