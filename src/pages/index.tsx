@@ -1,11 +1,9 @@
-import {signIn, signOut, useSession} from "next-auth/react";
 import Link from "next/link";
 
 import {api} from "~/utils/api";
 import Layout from "~/pages/components/layout";
 
 export default function Home() {
-    const hello = api.example.hello.useQuery({text: "from tRPC"});
 
     return (
         <Layout name={"HomePage"} title={"Home"} content={"HomePage for ForexFactory discord bot website."}>
