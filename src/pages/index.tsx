@@ -2,15 +2,31 @@ import Link from "next/link";
 
 import {api} from "~/utils/api";
 import Layout from "~/pages/components/layout";
+import {type CardProps} from "~/pages/components/feature-card";
+import FeatureCard from "~/pages/components/feature-card";
+
 
 export default function Home() {
+
+    const features: CardProps[] = [
+        {
+            title: "Economic News",
+            description: "Get the latest economic news and events straight to your discord server.",
+            icon: "M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z",
+        },
+        {
+            title: "News Alerts (Coming Soon)",
+            description: "Get notified before a new economic news is released.",
+            icon: "M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+        },
+    ]
 
     return (
         <Layout name={"HomePage"} title={"Home"} content={"HomePage for ForexFactory discord bot website."}>
             <div className={"relative overflow-hidden"}>
                 <main>
                     {/* Banner */}
-                    <div className={"bg-gray-800 pt-10 mb-10 sm:pt-16 lg:overflow-hidden lg:mb-0 lg:pt-8 lg:pb-14"}>
+                    <div className={"bg-gray-800 pt-10 mb-10 sm:pt-16 lg:overflow-hidden mb-0 lg:pt-8 pb-14"}>
                         <div className={"mx-auto max-w-7xl lg:px-8"}>
                             <div className={"lg:grid lg:grid-cols-2 lg:gap-20"}>
                                 <div className={"mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left"}>
@@ -40,8 +56,26 @@ export default function Home() {
                         </div>
                     </div>
                     {/* more stuff */}
+                    <div className={"relative bg-gray-900 py-20 sm:py-24 lg:py-28"}>
+                        <div className={"mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8"}>
+                            <h2 className={"text-2xl font-semibold text-blue-500"}>
+                                Start getting alerts now.
+                            </h2>
+                            <p className={"mx-auto mt-5 max-w-prose text-xl text-gray-400"}>
+                                ForexFactory is the only bot you will need to get the latest economic news and events straight to your discord server.
+                            </p>
+                            <div className={"mt-20"}>
+                                <div className={"grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3"}>
+                                    {features.length > 0 && features.map((feature) => (
+                                        <FeatureCard key={feature.title} title={feature.title} description={feature.description} icon={feature.icon} />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </main>
             </div>
         </Layout>
     );
 }
+
