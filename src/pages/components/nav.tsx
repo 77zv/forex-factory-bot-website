@@ -31,7 +31,7 @@ const Nav = () => {
         if (session) {
             await signOut();
         } else {
-            await signIn();
+            await signIn("discord");
         }
     }
 
