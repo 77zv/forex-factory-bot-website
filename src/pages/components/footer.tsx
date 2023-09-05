@@ -6,8 +6,8 @@ export const Footer = () => {
     const tabs: Tab[] = [
         {name: "Home", href: "/"},
         {name: "Invite", href: "https://discord.gg/exgDv6nv"},
-        {name: "Privacy Policy", href: "/privacy-policy"},
-        {name: "Licensing", href: "/licensing"},
+        // {name: "Privacy Policy", href: "/privacy-policy"},
+        {name: "Terms of Service", href: "/terms-of-service"},
         {name: "Support", href: "https://discord.gg/exgDv6nv"}
         ];
 
