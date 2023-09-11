@@ -8,7 +8,8 @@ export const Footer = () => {
         {name: "Invite", href: "https://discord.gg/exgDv6nv"},
         // {name: "Privacy Policy", href: "/privacy-policy"},
         {name: "Terms of Service", href: "/terms-of-service"},
-        {name: "Support", href: "https://discord.gg/exgDv6nv"}
+        {name: "Privacy Policy", href: "/privacy-policy"},
+        {name: "Support", href: "https://discord.gg/exgDv6nv"},
         ];
 
     return (
