@@ -9,7 +9,7 @@ const sections: Section[] = [
     {
         title: "Why and How We Collect Your Data",
         paragraphs: [
-            "Forex News Discord Bot primarily provides an automated application for chat and social platforms, referred to as the 'Service,' and is operated by Forex News Discord Bot (referred to as 'we,' 'us,' or 'forex-news-discord-bot.vercel.app') for users of the Service ('you'). This Privacy Policy outlines our policy concerning information collected from users of the Service. According to applicable law, forex-news-discord-bot.vercel.app acts as the 'data controller' for personal data collected during your use of the Service.",
+            "Forex News Discord Bot primarily provides an automated application for chat and social platforms, referred to as the 'Service,' and is operated by Forex News Discord Bot (referred to as 'we,' 'us,' or 'noediscord.xylex.cloud') for users of the Service ('you'). This Privacy Policy outlines our policy concerning information collected from users of the Service. According to applicable law, noediscord.xylex.cloud acts as the 'data controller' for personal data collected during your use of the Service.",
         ],
     },
     {
@@ -22,7 +22,7 @@ const sections: Section[] = [
     {
         title: "Where Your Data Is Processed",
         paragraphs: [
-            "forex-news-discord-bot.vercel.app is based in France. Regardless of your location, you consent to the processing and transfer of your information to France and other countries. The data collection and use laws in France and other countries may not be as comprehensive or protective as the laws in your country.",
+            "noediscord.xylex.cloud is based in France. Regardless of your location, you consent to the processing and transfer of your information to France and other countries. The data collection and use laws in France and other countries may not be as comprehensive or protective as the laws in your country.",
             "Our servers are located in Germany (Falkenstein).",
         ],
     },
@@ -46,7 +46,7 @@ const sections: Section[] = [
     {
         title: "What Data We Store About You",
         paragraphs: [
-            "To access the exact data we store, please contact us via Discord at support.forex-news-discord-bot.vercel.app by creating a ticket. You have the right to request us to stop storing any data related to you or to ask us to retrieve the data we store about you. Both processes may take up to 30 days.",
+            "To access the exact data we store, please contact us via Discord at support.noediscord.xylex.cloud by creating a ticket. You have the right to request us to stop storing any data related to you or to ask us to retrieve the data we store about you. Both processes may take up to 30 days.",
         ],
     },
     {
