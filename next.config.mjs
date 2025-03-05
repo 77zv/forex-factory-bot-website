@@ -7,16 +7,16 @@ await import("./src/env.mjs");
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
+  
+  // Enable the App Router
+  experimental: {
+  },
 
   /**
-   * If you are using `appDir` then you must comment the below `i18n` config out.
-   *
-   * @see https://github.com/vercel/next.js/issues/41980
+   * i18n config is not compatible with the App Router.
+   * For internationalization with App Router, see:
+   * https://nextjs.org/docs/app/building-your-application/routing/internationalization
    */
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
 };
 
 export default config;

@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import {useSession, signIn, signOut} from "next-auth/react";
-import {useState} from "react";
+import { signIn, signOut, useSession } from "next-auth/react";
+import { useState } from "react";
 
 export type Tab = {
     name: string;
@@ -15,19 +17,16 @@ const tabs: Tab[] = [
         name: "Invite",
         href: "https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"
     },
-    // {name: "Documentation", href: "/commands"},
     {name: "Support", href: "https://discord.gg/exgDv6nv"},
     {name: "Premium (Coming Soon)", href: "/Premium"},
     {name: "Dashboard", href: "/dashboard", requiresAuth: true,},
 ];
 
 const Nav = () => {
-
-    const {data: session} = useSession();
+    const { data: session } = useSession();
     const [isOpen, setIsOpen] = useState(false);
 
-     async function handleLogin() {
-        console.log('handle login')
+    async function handleLogin() {
         if (session) {
             await signOut();
         } else {
@@ -43,7 +42,7 @@ const Nav = () => {
                         <div className={"flex w-full items-center justify-between lg:w-auto"}>
                             <Link href={"/"}>
                                 <span className={"sr-only"}>Forex Factory</span>
-                                <img src={"./forexfactory-logo.png"} className={"h-10 w-auto sm:h-14"}
+                                <img src={"/forexfactory-logo.png"} className={"h-10 w-auto sm:h-14"}
                                      alt={"ForexFactory Logo"}/>
                             </Link>
                             <div className={"-mr-2 ml-auto flex items-center lg:hidden"}>
@@ -75,7 +74,7 @@ const Nav = () => {
                                 </Link>
                             </div>
                         );
-                    })};
+                    })}
                     <div className={"hidden space-x-8 lg:ml-10 lg:flex"}>
                         <button
                             type="button"
@@ -96,7 +95,7 @@ const Nav = () => {
                             <div className="flex items-center justify-between px-5 pt-4">
                                 <div>
                                     {/* Keep the logo size consistent with the header */}
-                                    <img src="./forexfactory-logo.png" className="h-10 w-auto sm:h-14" alt=""/>
+                                    <img src="/forexfactory-logo.png" className="h-10 w-auto sm:h-14" alt=""/>
                                 </div>
                                 <div className="-mr-2">
                                     <button
@@ -151,4 +150,5 @@ const Nav = () => {
         </header>
     );
 }
-export default Nav;
+
+export default Nav; 

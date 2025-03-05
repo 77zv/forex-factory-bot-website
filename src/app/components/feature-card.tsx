@@ -3,6 +3,7 @@ export type CardProps = {
     description: string,
     icon: string,
 }
+
 const FeatureCard = ({ title, description, icon} : CardProps) => {
     return (
         <div className={"pt-6"}>
@@ -23,4 +24,4 @@ const FeatureCard = ({ title, description, icon} : CardProps) => {
     )
 }
 
-export default FeatureCard
+export default FeatureCard 
