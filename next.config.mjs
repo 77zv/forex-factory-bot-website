@@ -8,9 +8,7 @@ await import("./src/env.mjs");
 const config = {
   reactStrictMode: true,
   
-  // Enable the App Router
-  experimental: {
-  },
+  // App Router is enabled by default in Next.js 13.4+
 
   /**
    * i18n config is not compatible with the App Router.
