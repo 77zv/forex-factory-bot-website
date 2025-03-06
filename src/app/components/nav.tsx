@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signOut, useSession, signInDiscord } from "../lib/auth-client";
 import { useState } from "react";
 
 export type Tab = {
@@ -30,7 +30,7 @@ const Nav = () => {
         if (session) {
             await signOut();
         } else {
-            await signIn("discord");
+            await signInDiscord();
         }
     }
 
