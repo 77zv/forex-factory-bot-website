@@ -54,7 +54,7 @@ const sections: Section[] = [
   {
     title: "Your Account",
     paragraphs: [
-      "You are responsible for your log-in credentials and for any activity resulting from the use of your log-in credentials or other activity on your account ("Account") on the Service. You represent and warrant that the information you provide to us upon registration and at all other times will be true, accurate, current, and complete. You are responsible for maintaining the confidentiality of your log-in credentials and are fully responsible for all activities that occur through the use of your credentials or otherwise on your Account. You agree to notify us immediately if you believe the confidentiality of your log-in credentials has been compromised or if you suspect unauthorized use of your Account. You agree that we will not be liable for any loss or damage arising from unauthorized use of your credentials.",
+      'You are responsible for your log-in credentials and for any activity resulting from the use of your log-in credentials or other activity on your account ("Account") on the Service. You represent and warrant that the information you provide to us upon registration and at all other times will be true, accurate, current, and complete. You are responsible for maintaining the confidentiality of your log-in credentials and are fully responsible for all activities that occur through the use of your credentials or otherwise on your Account. You agree to notify us immediately if you believe the confidentiality of your log-in credentials has been compromised or if you suspect unauthorized use of your Account. You agree that we will not be liable for any loss or damage arising from unauthorized use of your credentials.',
     ],
   },
   {
