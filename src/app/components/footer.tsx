@@ -4,10 +4,10 @@ import Link from "next/link";
 export const Footer = () => {
     const tabs: Tab[] = [
         {name: "Home", href: "/"},
-        {name: "Invite", href: "https://discord.gg/exgDv6nv"},
+        {name: "Invite", href: "https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=68608&scope=bot"},
         {name: "Terms of Service", href: "/terms-of-service"},
         {name: "Privacy Policy", href: "/privacy-policy"},
-        {name: "Support", href: "https://discord.gg/exgDv6nv"},
+        {name: "Support", href: "https://discord.gg/TKrhSG3Fg4"},
     ];
 
     return (
