@@ -3,6 +3,7 @@ import FeatureCard from "./components/feature-card";
 import { type CardProps } from "./components/feature-card";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
+import Image from "next/image";
 
 export default function Home() {
     const features: CardProps[] = [
@@ -53,7 +54,14 @@ export default function Home() {
                                    </div>
                                 </div>
                                 <div className={"hidden lg:flex items-center justify-center"}>
-                                    <img className={"w-3/5"} src={"/forexfactory-logo.png"} alt={"ForexFactory Logo"}/>
+                                    <Image 
+                                        className={"w-3/5"} 
+                                        src={"/forexfactory-logo.png"} 
+                                        alt={"ForexFactory Logo"}
+                                        width={500}
+                                        height={300}
+                                        priority
+                                    />
                                 </div>
                             </div>
                         </div>
