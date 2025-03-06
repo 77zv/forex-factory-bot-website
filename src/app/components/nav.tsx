@@ -19,7 +19,7 @@ const tabs: Tab[] = [
         href: "https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"
     },
     {name: "Support", href: "https://discord.gg/exgDv6nv"},
-    // {name: "Premium (Coming Soon)", href: "/Premium"},
+    {name: "Premium (Coming Soon)", href: "/Premium"},
     {name: "Dashboard", href: "/dashboard", requiresAuth: true,},
 ];
 
@@ -149,6 +149,7 @@ const Nav = () => {
                                         );
                                     })}
                                     <button
+                                        key={session ? "logout-mobile" : "login-mobile"}
                                         className={"block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-900"}
                                         onClick={() => void handleLogin()}
                                     >
