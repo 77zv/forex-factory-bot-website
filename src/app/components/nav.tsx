@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { signOut, useSession, signInDiscord } from "../lib/auth-client";
 import { useState } from "react";
+import Image from "next/image";
 
 export type Tab = {
     name: string;
@@ -18,7 +19,7 @@ const tabs: Tab[] = [
         href: "https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"
     },
     {name: "Support", href: "https://discord.gg/exgDv6nv"},
-    {name: "Premium (Coming Soon)", href: "/Premium"},
+    // {name: "Premium (Coming Soon)", href: "/Premium"},
     {name: "Dashboard", href: "/dashboard", requiresAuth: true,},
 ];
 
@@ -42,8 +43,13 @@ const Nav = () => {
                         <div className={"flex w-full items-center justify-between lg:w-auto"}>
                             <Link href={"/"}>
                                 <span className={"sr-only"}>Forex Factory</span>
-                                <img src={"/forexfactory-logo.png"} className={"h-10 w-auto sm:h-14"}
-                                     alt={"ForexFactory Logo"}/>
+                                <Image 
+                                    src={"/forexfactory-logo.png"} 
+                                    className={"h-10 w-auto sm:h-14"} 
+                                    alt={"ForexFactory Logo"}
+                                    width={100}
+                                    height={40}
+                                />
                             </Link>
                             <div className={"-mr-2 ml-auto flex items-center lg:hidden"}>
                                 {/* Mobile menu button */}
@@ -77,6 +83,7 @@ const Nav = () => {
                     })}
                     <div className={"hidden space-x-8 lg:ml-10 lg:flex"}>
                         <button
+                            key={session ? "logout" : "login"}
                             type="button"
                             className={"text-base font-medium text-white hover:text-gray-300"}
                             onClick={() => void handleLogin()}
@@ -95,7 +102,13 @@ const Nav = () => {
                             <div className="flex items-center justify-between px-5 pt-4">
                                 <div>
                                     {/* Keep the logo size consistent with the header */}
-                                    <img src="/forexfactory-logo.png" className="h-10 w-auto sm:h-14" alt=""/>
+                                    <Image 
+                                        src="/forexfactory-logo.png" 
+                                        className="h-10 w-auto sm:h-14" 
+                                        alt="ForexFactory Logo"
+                                        width={100}
+                                        height={40}
+                                    />
                                 </div>
                                 <div className="-mr-2">
                                     <button
