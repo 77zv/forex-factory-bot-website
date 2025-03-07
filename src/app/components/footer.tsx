@@ -11,12 +11,12 @@ export const Footer = () => {
     ];
 
     return (
-        <footer className="p-4 shadow dark:bg-gray-900">
+        <footer className="p-4 shadow bg-background-900">
             <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-                <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400" suppressHydrationWarning>
+                <span className="text-sm text-background-500 sm:text-center" suppressHydrationWarning>
                     © {new Date().getFullYear()} All Rights Reserved.
                 </span>
-                <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-background-500 sm:mt-0">
                     {tabs.map((tab) => {
                         return(
                             <Link key={tab.name} href={tab.href} className="mr-4 hover:underline md:mr-6">{tab.name}</Link>

@@ -38,7 +38,7 @@ const Nav = () => {
 
     return (
         <header className={"relative"}>
-            <div className={"bg-gray-900 py-7"}>
+            <div className={"bg-background-900 py-7"}>
                 <nav className={"relative mx-auto flex max-w-7xl items-center justify-between px-6"}>
                     <div className={"flex flex-1 items-center"}>
                         <div className={"flex w-full items-center justify-between lg:w-auto"}>
@@ -55,7 +55,7 @@ const Nav = () => {
                             <div className={"-mr-2 ml-auto flex items-center lg:hidden"}>
                                 {/* Mobile menu button */}
                                 <button
-                                    className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
+                                    className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-background-900 p-2 text-background-400 hover:bg-background-800 focus:outline-none focus:ring-2 focus:ring-white"
                                     type="button"
                                     onClick={() => {
                                         setIsOpen(!isOpen)
@@ -76,7 +76,7 @@ const Nav = () => {
                         return (
                             <div key={tab.name} className={"hidden space-x-8 lg:ml-10 lg:flex"}>
                                 <Link href={tab.href} aria-current="page"
-                                      className={"text-base font-medium text-white hover:text-gray-300"}>
+                                      className={"text-base font-medium text-white hover:text-background-300"}>
                                     {tab.name}
                                 </Link>
                             </div>
@@ -86,7 +86,7 @@ const Nav = () => {
                         <button
                             key={session ? "logout" : "login"}
                             type="button"
-                            className={"text-base font-medium text-white hover:text-gray-300"}
+                            className={"text-base font-medium text-white hover:text-background-300"}
                             onClick={() => void handleLogin()}
                         >
                             {session ? "Logout" : "Login"}
@@ -99,7 +99,7 @@ const Nav = () => {
                 <div className="fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity duration-300">
                     <div className="absolute inset-x-0 origin-top p-2 lg:hidden">
                         <div
-                            className="overflow-hidden rounded-lg bg-gray-800 shadow-md ring-1 ring-black ring-opacity-5">
+                            className="overflow-hidden rounded-lg bg-background-800 shadow-md ring-1 ring-black ring-opacity-5">
                             <div className="flex items-center justify-between px-5 pt-4">
                                 <div>
                                     {/* Keep the logo size consistent with the header */}
@@ -113,7 +113,7 @@ const Nav = () => {
                                 </div>
                                 <div className="-mr-2">
                                     <button
-                                        className="inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+                                        className="inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-600"
                                         onClick={() => {
                                             setIsOpen(!isOpen);
                                         }}
@@ -143,7 +143,7 @@ const Nav = () => {
                                                 key={tab.name}
                                                 href={tab.href}
                                                 aria-current="page"
-                                                className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-900"
+                                                className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-background-900"
                                             >
                                                 {tab.name}
                                             </Link>
@@ -151,7 +151,7 @@ const Nav = () => {
                                     })}
                                     <button
                                         key={session ? "logout-mobile" : "login-mobile"}
-                                        className={"block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-900"}
+                                        className={"block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-background-900"}
                                         onClick={() => void handleLogin()}
                                     >
                                         {session ? "Logout" : "Login"}

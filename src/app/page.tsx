@@ -32,7 +32,7 @@ export default function Home() {
             <div className={"relative overflow-hidden"}>
                 <main>
                     {/* Banner */}
-                    <div className={"bg-gray-800 pt-10 sm:pt-16 lg:overflow-hidden mb-0 lg:pt-8 pb-14"}>
+                    <div className={"bg-background-800 pt-10 sm:pt-16 lg:overflow-hidden mb-0 lg:pt-8 pb-14"}>
                         <div className={"mx-auto max-w-7xl lg:px-8"}>
                             <div className={"lg:grid lg:grid-cols-2 lg:gap-20"}>
                                 <div className={"mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left"}>
@@ -40,16 +40,16 @@ export default function Home() {
                                        <h1 className={"text-4xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl"}>
                                            <span className={"block"}>Be Informed About</span>
                                            <span className={"block bg-gradient-to-tr from-sky-500 from-20% to-sky-300 text-transparent bg-clip-text"}>Economic News</span>
-                                           <span className={"block"}>With ForexFactory
+                                           <span className={"block"}>With EconomicNewsBot
                                                <span className={"text-white"}>.</span>
                                            </span>
                                        </h1>
-                                       <p className={"mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"}>
+                                       <p className={"mt-3 text-base text-background-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"}>
                                              ForexFactory is a discord bot that provides you with the latest economic news and events straight to your discord server.
                                        </p>
                                        <div className={"mt-10 sm:mt-12"}>
                                            <Link href={"https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"}
-                                                 className={"font-semibold text-lg text-center w-full block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg px-5 py-2.5 m-auto dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"}>
+                                                 className={"font-semibold text-lg text-center w-full block text-white bg-primary hover:bg-primary-600 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 m-auto focus:outline-none"}>
                                                Get the Latest News Now
                                            </Link>
                                        </div>
@@ -69,12 +69,12 @@ export default function Home() {
                         </div>
                     </div>
                     {/* more stuff */}
-                    <div className={"relative bg-gray-900 py-20 sm:py-24 lg:py-28"}>
+                    <div className={"relative bg-background-900 py-20 sm:py-24 lg:py-28"}>
                         <div className={"mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8"}>
-                            <h2 className={"text-2xl font-semibold text-blue-500"}>
+                            <h2 className={"text-2xl font-semibold text-primary-500"}>
                                 Start getting alerts now.
                             </h2>
-                            <p className={"mx-auto mt-5 max-w-prose text-xl text-gray-400"}>
+                            <p className={"mx-auto mt-5 max-w-prose text-xl text-background-400"}>
                                 ForexFactory is the only bot you will need to get the latest economic news and events straight to your discord server.
                             </p>
                             <div className={"mt-20"}>

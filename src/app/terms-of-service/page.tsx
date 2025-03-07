@@ -5,10 +5,10 @@ export default function TermsOfService() {
   return (
     <>
       <Nav />
-      <div className="min-h-screen bg-gray-800 py-12">
+      <div className="min-h-screen bg-background-800 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-white">Terms of Service</h1>
-          <div className="mt-6 text-gray-300 space-y-6">
+          <div className="mt-6 text-background-300 space-y-6">
             {sections.map((section, index) => (
               <div key={index} className="mb-8">
                 <h2 className="text-xl font-semibold text-white mb-3">
