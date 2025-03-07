@@ -1,4 +1,4 @@
-import { Command } from "../components/command-showcase";
+import type { Command } from "../components/command-showcase";
 
 export const botCommands: Command[] = [
   // Public Commands
