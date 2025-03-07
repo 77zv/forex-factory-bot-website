@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import FeatureCard from "./components/feature-card";
 import { type CardProps } from "./components/feature-card";
@@ -37,7 +39,7 @@ export default function Home() {
                                    <div className={"lg:py-24"}>
                                        <h1 className={"text-4xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl"}>
                                            <span className={"block"}>Be Informed About</span>
-                                           <span className={"block text-blue-500"}>Economic News</span>
+                                           <span className={"block bg-gradient-to-tr from-sky-500 from-20% to-sky-300 text-transparent bg-clip-text"}>Economic News</span>
                                            <span className={"block"}>With ForexFactory
                                                <span className={"text-white"}>.</span>
                                            </span>
