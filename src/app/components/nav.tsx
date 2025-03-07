@@ -1,7 +1,8 @@
 "use client";
+// @TODO: Hydration error is caused by something in here
 
 import Link from "next/link";
-import { signOut, useSession, signInDiscord } from "../lib/auth-client";
+import { signOut, useSession, signInDiscord } from "../../lib/auth-client";
 import { useState } from "react";
 import Image from "next/image";
 

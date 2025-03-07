@@ -1,5 +1,3 @@
-"use client";
-
 import { type Tab } from "./nav";
 import Link from "next/link";
 
