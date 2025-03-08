@@ -55,7 +55,7 @@ export default function Home() {
                     {/* Discord Preview Section */}
                     <div className="bg-background-900 py-16 sm:py-24">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="text-center mb-12">
+                            <div className="text-center mb-12 animate-fade-in">
                                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                                     See the Bot in Action
                                 </h2>
@@ -64,41 +64,49 @@ export default function Home() {
                                 </p>
                             </div>
                             
-                            {/* Enhanced bot example presentation */}
+                            {/* Enhanced bot example presentation with animations */}
                             <div className="relative mx-auto max-w-3xl">
-                                {/* Decorative elements */}
-                                <div className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-primary/20 blur-xl"></div>
-                                <div className="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-primary/20 blur-xl"></div>
+                                {/* Animated decorative elements */}
+                                <div className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-primary/20 blur-xl animate-pulse"></div>
+                                <div className="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-primary/20 blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
                                 
-                                {/* Main image with frame */}
-                                <div className="bg-[#36393f] p-4 rounded-lg border border-background-700 shadow-2xl relative">
-                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/50 to-primary"></div>
+                                {/* Command input display with typing animation */}
+                                <div className="bg-background-800 text-white p-3 rounded-t-lg border-t border-x border-background-700 max-w-fit mx-auto mb-0 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
+                                    <code className="flex items-center gap-2">
+                                        <span className="text-primary font-bold">/</span>
+                                        <span className="typing-animation">today</span>
+                                    </code>
+                                </div>
+                                
+                                {/* Main image with frame and hover effects */}
+                                <div className="bg-[#36393f] p-4 rounded-lg border border-background-700 shadow-2xl relative transition-all duration-500 hover:shadow-primary/20 hover:shadow-xl">
+                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/50 to-primary animate-shimmer"></div>
                                     <Image 
                                         src="/bot-example.png" 
                                         alt="Discord Bot Example" 
                                         width={600} 
                                         height={800} 
-                                        className="rounded-md mx-auto"
+                                        className="rounded-md mx-auto transform transition-all duration-700 hover:scale-[1.02]"
                                         priority
                                     />
                                     
-                                    {/* Discord-like footer */}
-                                    <div className="mt-3 flex items-center justify-between text-xs text-background-400">
+                                    {/* Discord-like footer with fade-in */}
+                                    <div className="mt-3 flex items-center justify-between text-xs text-background-400 animate-fade-in" style={{ animationDelay: '0.5s' }}>
                                         <span>Powered by Xylex.ai</span>
                                         <span>Economic Calendar Bot</span>
                                     </div>
                                 </div>
                                 
-                                {/* Caption */}
-                                <p className="text-center text-background-400 mt-4 text-sm">
+                                {/* Caption with fade-in */}
+                                <p className="text-center text-background-400 mt-4 text-sm animate-fade-in" style={{ animationDelay: '0.7s' }}>
                                     Real-time economic news delivered directly to your Discord server
                                 </p>
                             </div>
                             
-                            {/* Feature highlights */}
+                            {/* Feature highlights with staggered animations */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center">
-                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center transform transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                                         </svg>
@@ -107,8 +115,8 @@ export default function Home() {
                                     <p className="text-background-300 text-sm mt-2">Get economic news as it happens</p>
                                 </div>
                                 
-                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center">
-                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center transform transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
                                         </svg>
@@ -117,8 +125,8 @@ export default function Home() {
                                     <p className="text-background-300 text-sm mt-2">Filter by currency, impact, and more</p>
                                 </div>
                                 
-                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center">
-                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center transform transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                         </svg>
