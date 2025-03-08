@@ -273,3 +273,176 @@
 .translate-z-8 {
   transform: translateZ(8px);
 }
+
+/* Updated styles for the enhanced hero banner */
+
+/* Grid pattern background */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(2, 235, 247, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2, 235, 247, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Economic symbols animation - adjusted to not cover text */
+.economic-symbols {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Ensures symbols don't interfere with interactions */
+}
+
+.symbol {
+  position: absolute;
+  color: rgba(2, 235, 247, 0.2);
+  font-size: 24px;
+  animation: float-symbol 15s linear infinite;
+  opacity: 0;
+  z-index: 0; /* Ensure symbols stay behind content */
+}
+
+.symbol-usd { top: 15%; left: 10%; animation-delay: 0s; }
+.symbol-eur { top: 25%; left: 80%; animation-delay: 2s; }
+.symbol-gbp { top: 60%; left: 15%; animation-delay: 4s; }
+.symbol-jpy { top: 75%; left: 75%; animation-delay: 6s; }
+.symbol-chart { top: 40%; left: 30%; animation-delay: 8s; }
+.symbol-chart-down { top: 30%; left: 60%; animation-delay: 10s; }
+
+@keyframes float-symbol {
+  0% { transform: translateY(20px); opacity: 0; }
+  10% { opacity: 0.2; } /* Reduced opacity */
+  90% { opacity: 0.2; } /* Reduced opacity */
+  100% { transform: translateY(-100px); opacity: 0; }
+}
+
+/* Typing animation for hero text */
+.typing-container {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  z-index: 10; /* Ensure text stays above animations */
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid rgba(2, 235, 247, 0.7);
+  white-space: nowrap;
+  animation: typing 4s steps(50) 1s 1 normal both, blink 1s steps(1) infinite;
+  width: 0;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* 3D Discord mockup - adjusted for the example image */
+.perspective-container {
+  perspective: 1000px;
+}
+
+.discord-bot-mockup {
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: float-discord 6s ease-in-out infinite;
+}
+
+.discord-window {
+  width: 100%;
+  transform-style: preserve-3d;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.bot-response-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.375rem; /* 6px */
+}
+
+.bot-response-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes float-discord {
+  0%, 100% { transform: translateY(0) rotateY(6deg) rotateX(12deg) translateZ(12px); }
+  50% { transform: translateY(-15px) rotateY(8deg) rotateX(10deg) translateZ(12px); }
+}
+
+/* Slow ping animation */
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 1; }
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* CSS Transform Utilities */
+.rotate-y-6 {
+  transform: rotateY(6deg);
+}
+
+.rotate-x-12 {
+  transform: rotateX(12deg);
+}
+
+.translate-z-12 {
+  transform: translateZ(12px);
+}
+
+/* Image cropping styles */
+.image-crop-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 0.375rem; /* 6px */
+}
+
+.image-crop-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.bot-response-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.375rem; /* 6px */
+}
+
+/* Animated gradient text */
+.animated-gradient-text {
+  background: linear-gradient(to right, #02ebf7, #38bdf8, #0ea5e9, #0284c7);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 4s linear infinite;
+}
+
+.animated-gradient-text-reverse {
+  background: linear-gradient(to right, #0284c7, #0ea5e9, #38bdf8, #02ebf7);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 4s linear infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}

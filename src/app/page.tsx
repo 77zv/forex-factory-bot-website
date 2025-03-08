@@ -14,39 +14,141 @@ export default function Home() {
             <Nav />
             <div className={"relative overflow-hidden"}>
                 <main>
-                    {/* Banner */}
-                    <div className={"bg-background-800 pt-10 sm:pt-16 lg:overflow-hidden mb-0 lg:pt-8 pb-14"}>
-                        <div className={"mx-auto max-w-7xl lg:px-8"}>
-                            <div className={"lg:grid lg:grid-cols-2 lg:gap-20"}>
-                                <div className={"mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left"}>
-                                   <div className={"lg:py-24"}>
-                                       <h1 className={"text-4xl font-bold tracking-tight text-white sm:text-6xl lg:mt-6 xl:text-6xl"}>
-                                           <span className={"block"}>Be Informed About</span>
-                                           <span className={"block bg-gradient-to-tr from-sky-500 from-20% to-sky-300 text-transparent bg-clip-text"}>Economic News</span>
-                                           <span className={"block"}>With EconomicNewsBot
-                                               <span className={"text-white"}>.</span>
+                    {/* Enhanced Hero Banner */}
+                    <div className="relative isolate overflow-hidden bg-background-900">
+                        {/* Animated background elements */}
+                        <div className="absolute inset-0 -z-10">
+                            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+                            <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+                            
+                            {/* Animated grid pattern */}
+                            <div className="absolute inset-0 opacity-20">
+                                <div className="grid-pattern"></div>
+                            </div>
+                            
+                            {/* Floating economic symbols */}
+                            <div className="economic-symbols">
+                                <div className="symbol symbol-usd">$</div>
+                                <div className="symbol symbol-eur">€</div>
+                                <div className="symbol symbol-gbp">£</div>
+                                <div className="symbol symbol-jpy">¥</div>
+                                <div className="symbol symbol-chart">📈</div>
+                                <div className="symbol symbol-chart-down">📉</div>
+                            </div>
+                        </div>
+                        
+                        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+                            <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto z-10">
+                                {/* Animated badge */}
+                                <div className="flex">
+                                    <div className="relative flex items-center gap-x-2 rounded-full px-4 py-1 text-sm leading-6 text-white ring-1 ring-primary/20 hover:ring-primary/50 bg-background-800 mb-6 animate-fade-in">
+                                        <span className="absolute inset-0 animate-ping-slow rounded-full bg-primary/10"></span>
+                                        <span className="font-semibold text-primary">New</span>
+                                        <span className="text-background-300">Discord Bot v1.0 Released</span>
+                                        <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 fill-current text-primary">
+                                            <circle cx="1" cy="1" r="1" />
+                                        </svg>
+                                        <a href="#" className="font-medium text-primary">
+                                            <span className="absolute inset-0" aria-hidden="true"></span>
+                                            Read more <span aria-hidden="true">&rarr;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                {/* Enhanced headline with improved gradient text */}
+                                <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                                    <span className="inline-block animate-slide-up" style={{ animationDelay: '0.1s' }}>Stay</span>{' '}
+                                    <span className="inline-block animate-slide-up" style={{ animationDelay: '0.2s' }}>informed</span>{' '}
+                                    <span className="inline-block animate-slide-up" style={{ animationDelay: '0.3s' }}>with</span>{' '}
+                                    <span className="inline-block animate-slide-up" style={{ animationDelay: '0.4s' }}>
+                                        {/* Option 1: Teal to Blue gradient (similar to your original) */}
+                                        <span className="bg-gradient-to-r from-primary via-cyan-400 to-blue-500 text-transparent bg-clip-text">Economic</span>
+                                    </span>{' '}
+                                    <span className="inline-block animate-slide-up" style={{ animationDelay: '0.5s' }}>
+                                        <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-primary text-transparent bg-clip-text">News</span>
                                            </span>
                                        </h1>
-                                       <p className={"mt-3 text-base text-background-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"}>
-                                             ForexFactory is a discord bot that provides you with the latest economic news and events straight to your discord server.
-                                       </p>
-                                       <div className={"mt-10 sm:mt-12"}>
-                                           <Link href={"https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"}
-                                                 className={"font-semibold text-lg text-center w-full block text-white bg-primary hover:bg-primary-600 focus:ring-4 focus:ring-primary-300 rounded-lg px-5 py-2.5 m-auto focus:outline-none"}>
-                                               Get the Latest News Now
-                                           </Link>
+                                
+                                {/* Enhanced description with animated typing effect */}
+                                <p className="mt-6 text-lg leading-8 text-background-300 typing-container">
+                                    <span className="typing-text">Get real-time economic updates delivered directly to your Discord server. Stay ahead of market-moving events with our powerful bot.</span>
+                                </p>
+                                
+                                {/* Enhanced CTA buttons with hover effects */}
+                                <div className="mt-10 flex items-center gap-x-6">
+                                    <a href="#" className="relative group rounded-md bg-primary px-6 py-3 text-sm font-semibold text-background-900 shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-300 overflow-hidden">
+                                        <span className="absolute inset-0 w-0 bg-white/20 transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="relative">Add to Discord</span>
+                                    </a>
+                                    <a href="#" className="text-sm font-semibold leading-6 text-white hover:text-primary transition-colors duration-300 flex items-center">
+                                        Learn more <span aria-hidden="true" className="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                                    </a>
                                        </div>
+                                
+                                {/* Social proof - Updated to 4000+ servers */}
+                                <div className="mt-12 flex items-center gap-x-6 text-sm text-background-400 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+                                    <div className="flex -space-x-2">
+                                        <div className="w-8 h-8 rounded-full bg-background-800 border-2 border-background-900 flex items-center justify-center text-[10px] text-white">S1</div>
+                                        <div className="w-8 h-8 rounded-full bg-background-800 border-2 border-background-900 flex items-center justify-center text-[10px] text-white">S2</div>
+                                        <div className="w-8 h-8 rounded-full bg-background-800 border-2 border-background-900 flex items-center justify-center text-[10px] text-white">S3</div>
+                                        <div className="w-8 h-8 rounded-full bg-background-800 border-2 border-background-900 flex items-center justify-center text-[10px] text-white">+</div>
                                    </div>
+                                    <div>Trusted by 4000+ Discord servers</div>
                                 </div>
-                                <div className={"hidden lg:flex items-center justify-center"}>
-                                    <Image 
-                                        className={"w-3/5"} 
-                                        src={"/forexfactory-logo.png"} 
-                                        alt={"ForexFactory Logo"}
-                                        width={500}
-                                        height={300}
-                                        priority
-                                    />
+                            </div>
+                            
+                            {/* 3D Discord Bot Mockup with example image */}
+                            <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow z-10">
+                                <div className="relative mx-auto w-[350px] text-white perspective-container animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                                    <div className="discord-bot-mockup">
+                                        {/* Discord window frame with Mac-style tabs */}
+                                        <div className="discord-window bg-[#36393f] rounded-lg shadow-2xl transform rotate-y-6 rotate-x-12 translate-z-12">
+                                            {/* Mac-style header */}
+                                            <div className="discord-header bg-[#202225] px-4 py-2 rounded-t-lg flex items-center">
+                                                <div className="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                                <div className="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                                <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                                                <div className="ml-4 text-white text-xs">Economic News Bot</div>
+                                            </div>
+                                            
+                                            {/* Discord content */}
+                                            <div className="discord-content p-4">
+                                                {/* User command */}
+                                                <div className="flex items-start mb-4">
+                                                    <div className="flex-shrink-0 mr-2">
+                                                        <div className="w-8 h-8 rounded-full bg-[#5865F2] flex items-center justify-center">
+                                                            <span className="text-white text-xs">U</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div className="text-white text-xs mb-1">User <span className="text-[#72767d] text-[10px]">Today at 12:34</span></div>
+                                                        <div className="bg-[#2f3136] text-white text-xs px-2 py-1 rounded">
+                                                            /today
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                {/* Bot response using only half of the example image */}
+                                                <div className="bot-response-container">
+                                                    <div className="image-crop-container">
+                                                        <Image 
+                                                            src="/bot-example.png" 
+                                                            alt="Discord Bot Example" 
+                                                            width={300} 
+                                                            height={200} 
+                                                            className="rounded-md"
+                                                            priority
+                                                            style={{ 
+                                                                objectFit: 'cover', 
+                                                                objectPosition: 'top',
+                                                                maxHeight: '200px'
+                                                            }}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
