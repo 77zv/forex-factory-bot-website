@@ -364,9 +364,45 @@ export default function Home() {
                     </div>
 
                     {/* Command Showcase Section */}
-                    <div className="bg-background-800 py-16 sm:py-24">
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <CommandShowcase commands={botCommands} />
+                    <div className="relative py-20 sm:py-28 overflow-hidden">
+                        {/* Animated background elements */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-background-900 via-background-800 to-background-900">
+                            <div className="grid-pattern absolute inset-0 opacity-20"></div>
+                            
+                            {/* Animated floating symbols */}
+                            <div className="economic-symbols">
+                                <div className="symbol symbol-usd">/help</div>
+                                <div className="symbol symbol-eur">/news</div>
+                                <div className="symbol symbol-gbp">/setup</div>
+                                <div className="symbol symbol-jpy">/filter</div>
+                                <div className="symbol symbol-chart">/schedule</div>
+                                <div className="symbol symbol-chart-down">/status</div>
+                            </div>
+                            
+                            {/* Animated glowing orbs */}
+                            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-[100px] animate-pulse"></div>
+                            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+                        </div>
+                        
+                        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+                            {/* Section header with animation */}
+                            <div className="text-center mb-12 animate-fade-in">
+                                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-3">
+                                    <span className="animated-gradient-text">Powerful Discord Commands</span>
+                                </h2>
+                                <p className="text-xl text-background-300 max-w-3xl mx-auto">
+                                    Control economic news delivery with these simple commands
+                                </p>
+                            </div>
+                            
+                            {/* Command showcase with enhanced styling */}
+                            <div className="relative">
+                                <CommandShowcase commands={botCommands} />
+                                
+                                {/* Decorative elements */}
+                                <div className="absolute -top-10 -left-10 w-20 h-20 border border-primary/20 rounded-full animate-spin-slow opacity-30" style={{ animationDuration: '15s' }}></div>
+                                <div className="absolute -bottom-10 -right-10 w-32 h-32 border border-primary/20 rounded-full animate-spin-slow opacity-30" style={{ animationDuration: '20s', animationDirection: 'reverse' }}></div>
+                            </div>
                         </div>
                     </div>
 
