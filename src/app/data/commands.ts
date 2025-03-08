@@ -4,60 +4,60 @@ export const botCommands: Command[] = [
   // Public Commands
   {
     name: "today",
-    description: "Get economic news and events for today",
-    usage: "/today",
+    description: "Get today's news and events",
+    usage: "/today [market] [currency] [impact] [timezone] [time_display]",
     category: "public",
-    example: "/today"
+    example: "/today market:Forex currency:USD,EUR impact:High timezone:GMT+1"
   },
   {
     name: "tomorrow",
-    description: "Get economic news and events for tomorrow",
-    usage: "/tomorrow",
+    description: "Get tomorrow's news and events",
+    usage: "/tomorrow [market] [currency] [impact] [timezone] [time_display]",
     category: "public",
-    example: "/tomorrow"
+    example: "/tomorrow market:Forex currency:USD,EUR impact:High timezone:GMT+1"
   },
   {
     name: "week",
     description: "Get economic news and events for the current week",
-    usage: "/week",
+    usage: "/week [market] [currency] [impact] [timezone] [time_display]",
     category: "public",
-    example: "/week"
+    example: "/week market:Forex currency:USD,EUR impact:High timezone:GMT+1"
   },
   
   // Admin Commands
   {
-    name: "createSchedule",
+    name: "create-schedule",
     description: "Create a new schedule for automatic news posting",
-    usage: "/createSchedule [channel] [time] [timezone]",
+    usage: "/create-schedule [hour] [minute] [timezone] [newsscope] [frequency] [impact] [currency] [market] [time_display]",
     category: "admin",
-    example: "/createSchedule #economic-news 08:00 EST"
+    example: "/create-schedule hour:08 minute:00 timezone:GMT+1 newsscope:Daily frequency:Weekdays"
   },
   {
-    name: "deleteSchedule",
+    name: "delete-schedule",
     description: "Delete a specific schedule by ID",
-    usage: "/deleteSchedule [scheduleId]",
+    usage: "/delete-schedule [id]",
     category: "admin",
-    example: "/deleteSchedule 12345"
+    example: "/delete-schedule id:12345"
   },
   {
-    name: "deleteAllSchedules",
+    name: "delete-all-schedules",
     description: "Delete all schedules for this server",
-    usage: "/deleteAllSchedules",
+    usage: "/delete-all-schedules",
     category: "admin",
-    example: "/deleteAllSchedules"
+    example: "/delete-all-schedules"
   },
   {
-    name: "editSchedule",
+    name: "edit-schedule",
     description: "Edit an existing schedule",
-    usage: "/editSchedule [scheduleId] [channel] [time] [timezone]",
+    usage: "/edit-schedule [id] [hour] [minute] [timezone] [newsscope] [frequency] [impact] [currency] [market] [time_display]",
     category: "admin",
-    example: "/editSchedule 12345 #news 09:30 PST"
+    example: "/edit-schedule id:12345 hour:09 minute:30 timezone:GMT-8"
   },
   {
-    name: "listSchedules",
+    name: "list-schedules",
     description: "List all active schedules for this server",
-    usage: "/listSchedules",
+    usage: "/list-schedules",
     category: "admin",
-    example: "/listSchedules"
+    example: "/list-schedules"
   }
 ]; 
