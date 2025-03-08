@@ -243,53 +243,121 @@ export default function Home() {
                             </div>
                             
                             {/* Testimonials/Use Cases */}
-                            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-                                {/* Use Case 1 */}
-                                <div className="bg-background-800 p-6 rounded-lg border border-background-700 transition-all hover:border-primary/50 hover:shadow-lg">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-10 h-10 rounded-full bg-[#5865F2] flex items-center justify-center mr-3">
-                                            <span className="text-white font-bold">T</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-white font-medium">Trading Communities</h4>
-                                            <p className="text-background-400 text-sm">Discord Server</p>
-                                        </div>
-                                    </div>
-                                    <p className="text-background-300">
-                                        &quot;Our members rely on timely economic news to make trading decisions. This bot delivers exactly what we need, when we need it.&quot;
+                            <div className="mt-20">
+                                <div className="text-center mb-12">
+                                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                                        Trusted by Communities
+                                    </h2>
+                                    <p className="mt-4 text-lg text-background-300 max-w-2xl mx-auto">
+                                        See how different communities are leveraging our bot to stay informed
                                     </p>
                                 </div>
                                 
-                                {/* Use Case 2 */}
-                                <div className="bg-background-800 p-6 rounded-lg border border-background-700 transition-all hover:border-primary/50 hover:shadow-lg">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-10 h-10 rounded-full bg-[#5865F2] flex items-center justify-center mr-3">
-                                            <span className="text-white font-bold">E</span>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                    {/* Use Case 1 */}
+                                    <div className="bg-gradient-to-br from-background-800 to-background-900 p-8 rounded-xl border border-background-700 transition-all duration-300 hover:border-primary hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)] group relative overflow-hidden">
+                                        {/* Decorative element */}
+                                        <div className="absolute -top-10 -right-10 w-20 h-20 bg-primary/10 rounded-full blur-xl group-hover:bg-primary/20 transition-all duration-500"></div>
+                                        
+                                        <div className="flex items-center mb-6 relative">
+                                            <div className="w-12 h-12 rounded-full bg-[#5865F2] flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                                <span className="text-white font-bold text-lg">T</span>
+                                            </div>
+                                            <div>
+                                                <h4 className="text-white font-semibold text-lg">Trading Communities</h4>
+                                                <p className="text-background-400 text-sm flex items-center">
+                                                    <svg className="w-3 h-3 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                    </svg>
+                                                    Discord Server
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h4 className="text-white font-medium">Economics Students</h4>
-                                            <p className="text-background-400 text-sm">Study Group</p>
+                                        <div className="bg-background-800/50 p-4 rounded-lg border-l-2 border-primary mb-4">
+                                            <p className="text-background-200 italic">
+                                                &quot;Our members rely on timely economic news to make trading decisions. This bot delivers exactly what we need, when we need it.&quot;
+                                            </p>
+                                        </div>
+                                        <div className="flex justify-between items-center text-sm text-background-400">
+                                            <span>500+ members</span>
+                                            <span className="flex items-center">
+                                                <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                5.0/5
+                                            </span>
                                         </div>
                                     </div>
-                                    <p className="text-background-300">
-                                        &quot;We set up daily briefings that keep our study group informed about real-world economic events. Perfect for discussions.&quot;
-                                    </p>
-                                </div>
-                                
-                                {/* Use Case 3 */}
-                                <div className="bg-background-800 p-6 rounded-lg border border-background-700 transition-all hover:border-primary/50 hover:shadow-lg">
-                                    <div className="flex items-center mb-4">
-                                        <div className="w-10 h-10 rounded-full bg-[#5865F2] flex items-center justify-center mr-3">
-                                            <span className="text-white font-bold">F</span>
+                                    
+                                    {/* Use Case 2 */}
+                                    <div className="bg-gradient-to-br from-background-800 to-background-900 p-8 rounded-xl border border-background-700 transition-all duration-300 hover:border-primary hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)] group relative overflow-hidden">
+                                        {/* Decorative element */}
+                                        <div className="absolute -top-10 -right-10 w-20 h-20 bg-primary/10 rounded-full blur-xl group-hover:bg-primary/20 transition-all duration-500"></div>
+                                        
+                                        <div className="flex items-center mb-6 relative">
+                                            <div className="w-12 h-12 rounded-full bg-[#5865F2] flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                                <span className="text-white font-bold text-lg">E</span>
+                                            </div>
+                                            <div>
+                                                <h4 className="text-white font-semibold text-lg">Economics Students</h4>
+                                                <p className="text-background-400 text-sm flex items-center">
+                                                    <svg className="w-3 h-3 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                    </svg>
+                                                    Study Group
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h4 className="text-white font-medium">Financial Analysts</h4>
-                                            <p className="text-background-400 text-sm">Professional Network</p>
+                                        <div className="bg-background-800/50 p-4 rounded-lg border-l-2 border-primary mb-4">
+                                            <p className="text-background-200 italic">
+                                                &quot;We set up daily briefings that keep our study group informed about real-world economic events. Perfect for discussions.&quot;
+                                            </p>
+                                        </div>
+                                        <div className="flex justify-between items-center text-sm text-background-400">
+                                            <span>200+ members</span>
+                                            <span className="flex items-center">
+                                                <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                4.9/5
+                                            </span>
                                         </div>
                                     </div>
-                                    <p className="text-background-300">
-                                        &quot;The ability to filter by impact level and currency helps us focus on the news that matters most to our clients.&quot;
-                                    </p>
+                                    
+                                    {/* Use Case 3 */}
+                                    <div className="bg-gradient-to-br from-background-800 to-background-900 p-8 rounded-xl border border-background-700 transition-all duration-300 hover:border-primary hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)] group relative overflow-hidden">
+                                        {/* Decorative element */}
+                                        <div className="absolute -top-10 -right-10 w-20 h-20 bg-primary/10 rounded-full blur-xl group-hover:bg-primary/20 transition-all duration-500"></div>
+                                        
+                                        <div className="flex items-center mb-6 relative">
+                                            <div className="w-12 h-12 rounded-full bg-[#5865F2] flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                                <span className="text-white font-bold text-lg">F</span>
+                                            </div>
+                                            <div>
+                                                <h4 className="text-white font-semibold text-lg">Financial Analysts</h4>
+                                                <p className="text-background-400 text-sm flex items-center">
+                                                    <svg className="w-3 h-3 mr-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                    </svg>
+                                                    Professional Network
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="bg-background-800/50 p-4 rounded-lg border-l-2 border-primary mb-4">
+                                            <p className="text-background-200 italic">
+                                                &quot;The ability to filter by impact level and currency helps us focus on the news that matters most to our clients.&quot;
+                                            </p>
+                                        </div>
+                                        <div className="flex justify-between items-center text-sm text-background-400">
+                                            <span>350+ members</span>
+                                            <span className="flex items-center">
+                                                <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                                </svg>
+                                                4.8/5
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
