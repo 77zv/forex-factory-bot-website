@@ -661,24 +661,39 @@ export default function Home() {
                     </div>
 
                     {/* CTA Section */}
-                    <div className="bg-background-800 py-16">
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="bg-primary bg-opacity-10 rounded-2xl px-6 py-10 sm:px-12 sm:py-16 lg:flex lg:items-center lg:justify-between">
-                                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                                    <span className="block">Ready to stay informed?</span>
-                                    <span className="block text-primary-300">Add the bot to your server today.</span>
-                                </h2>
-                                <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                                    <div className="inline-flex rounded-md shadow">
+                    <div className="relative overflow-hidden py-20">
+                        {/* Animated background with gradient and particles */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-background-900 via-background-800 to-primary/20 z-0">
+                            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.15"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
+                            {/* Animated floating elements */}
+                            <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-primary/10 animate-pulse"></div>
+                            <div className="absolute bottom-20 right-20 w-32 h-32 rounded-full bg-primary/5 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                            <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full bg-primary/10 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+                        </div>
+                        
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+                            <div className="backdrop-blur-lg bg-background-800/40 rounded-3xl px-8 py-12 sm:px-14 sm:py-20 lg:flex lg:items-center lg:justify-between border border-background-700/50 shadow-[0_10px_50px_rgba(0,0,0,0.3)] transform hover:shadow-[0_15px_60px_rgba(var(--primary-rgb),0.2)] transition-all duration-500">
+                                <div className="max-w-2xl">
+                                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                                        <span className="block animate-fade-in-up">Ready to stay informed?</span>
+                                        <span className="block text-primary-300 mt-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>Add the bot to your server today.</span>
+                                    </h2>
+                                    <p className="mt-4 text-lg text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+                                        Get real-time forex updates and market insights directly in your Discord server.
+                                    </p>
+                                </div>
+                                <div className="mt-10 lg:mt-0 lg:flex-shrink-0 lg:ml-8 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+                                    <div className="flex flex-col sm:flex-row gap-4">
                                         <Link href="https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"
-                                            className="inline-flex items-center justify-center rounded-md border border-transparent bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary-600">
+                                            className="inline-flex items-center justify-center rounded-xl border border-transparent bg-primary px-6 py-4 text-base font-medium text-white hover:bg-primary-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary/30">
+                                            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                                            </svg>
                                             Add to Discord
                                         </Link>
-                                    </div>
-                                    <div className="ml-3 inline-flex rounded-md shadow">
                                         <Link href="#"
-                                            className="inline-flex items-center justify-center rounded-md border border-transparent bg-background-700 px-5 py-3 text-base font-medium text-white hover:bg-background-600">
-                                            Learn more
+                                            className="inline-flex items-center justify-center rounded-xl border border-background-600 bg-background-700/80 px-6 py-4 text-base font-medium text-white hover:bg-background-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                                            Learn More
                                         </Link>
                                     </div>
                                 </div>
