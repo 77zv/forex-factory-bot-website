@@ -395,12 +395,6 @@ export default function Home() {
                                                             <div className="marking marking-9 absolute left-2 top-1/2 transform -translate-y-1/2 w-2 h-1 bg-white"></div>
                                                         </div>
                                                         
-                                                        {/* Fixed Clock numbers */}
-                                                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2 text-white text-[8px]">12</div>
-                                                        <div className="absolute top-1/2 right-3 transform translate-y-[-50%] text-white text-[8px]">3</div>
-                                                        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white text-[8px]">6</div>
-                                                        <div className="absolute top-1/2 left-3 transform translate-y-[-50%] text-white text-[8px]">9</div>
-                                                        
                                                         {/* Clock hands */}
                                                         <div className="clock-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-primary rounded-full z-10"></div>
                                                         <div className="clock-hour absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 origin-center w-1 h-8 bg-white rounded-full animate-clock-hour"></div>
