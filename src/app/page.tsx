@@ -69,10 +69,13 @@ export default function Home() {
                                            </span>
                                        </h1>
                                 
-                                {/* Enhanced description with animated typing effect */}
-                                <p className="mt-6 text-lg leading-8 text-background-300 typing-container">
-                                    <span className="typing-text">Get real-time economic updates delivered directly to your Discord server. Stay ahead of market-moving events with our powerful bot.</span>
-                                </p>
+                                {/* Enhanced description with text on separate lines to prevent cutoff */}
+                                <div className="mt-6 max-w-md">
+                                    <p className="text-lg leading-8 text-background-300">
+                                        Get real-time economic updates delivered directly to your Discord server.
+                                        Stay ahead of market-moving events with our powerful bot.
+                                    </p>
+                                </div>
                                 
                                 {/* Enhanced CTA buttons with hover effects */}
                                 <div className="mt-10 flex items-center gap-x-6">
