@@ -23,7 +23,7 @@ const CommandShowcase = ({ commands }: CommandShowcaseProps) => {
   // Set the first command as active by default
   useEffect(() => {
     if (commands.length > 0 && !activeCommand) {
-      setActiveCommand(commands[0]);
+      setActiveCommand(commands[0]!);
     }
   }, [commands, activeCommand]);
 
