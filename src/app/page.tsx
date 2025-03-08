@@ -398,6 +398,10 @@ export default function Home() {
                             {/* Command showcase with enhanced styling */}
                             <div className="relative">
                                 <CommandShowcase commands={botCommands} />
+                                
+                                {/* Decorative elements */}
+                                <div className="absolute -top-10 -left-10 w-20 h-20 border border-primary/20 rounded-full animate-spin-slow opacity-30" style={{ animationDuration: '15s' }}></div>
+                                <div className="absolute -bottom-10 -right-10 w-32 h-32 border border-primary/20 rounded-full animate-spin-slow opacity-30" style={{ animationDuration: '20s', animationDirection: 'reverse' }}></div>
                             </div>
                         </div>
                     </div>
@@ -658,9 +662,12 @@ export default function Home() {
 
                     {/* CTA Section */}
                     <div className="relative overflow-hidden py-20">
-                        {/* Animated background with gradient */}
+                        {/* Animated background with gradient and particles */}
                         <div className="absolute inset-0 bg-gradient-to-br from-background-900 via-background-800 to-primary/20 z-0">
                             <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.15"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
+                            {/* Animated floating elements */}
+                            <div className="absolute bottom-20 right-20 w-32 h-32 rounded-full bg-primary/5 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                            <div className="absolute top-1/2 left-1/4 w-16 h-16 rounded-full bg-primary/10 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
                         </div>
                         
                         <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
