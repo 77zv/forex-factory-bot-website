@@ -398,10 +398,6 @@ export default function Home() {
                             {/* Command showcase with enhanced styling */}
                             <div className="relative">
                                 <CommandShowcase commands={botCommands} />
-                                
-                                {/* Decorative elements */}
-                                <div className="absolute -top-10 -left-10 w-20 h-20 border border-primary/20 rounded-full animate-spin-slow opacity-30" style={{ animationDuration: '15s' }}></div>
-                                <div className="absolute -bottom-10 -right-10 w-32 h-32 border border-primary/20 rounded-full animate-spin-slow opacity-30" style={{ animationDuration: '20s', animationDirection: 'reverse' }}></div>
                             </div>
                         </div>
                     </div>
