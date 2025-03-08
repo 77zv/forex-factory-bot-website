@@ -70,7 +70,7 @@ export default function Home() {
                                        </h1>
                                 
                                 {/* Enhanced description with text on separate lines to prevent cutoff */}
-                                <div className="mt-6 max-w-md">
+                                <div className="mt-6 max-w-xl">
                                     <p className="text-lg leading-8 text-background-300">
                                         Get real-time economic updates delivered directly to your Discord server.
                                         Stay ahead of market-moving events with our powerful bot.
