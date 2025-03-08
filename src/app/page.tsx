@@ -52,87 +52,139 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Discord Preview Section */}
+                    {/* Discord Preview Section - Redesigned */}
                     <div className="bg-background-900 py-16 sm:py-24">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="text-center mb-12 animate-fade-in">
+                            <div className="text-center mb-12">
                                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                                     See the Bot in Action
                                 </h2>
                                 <p className="mt-4 text-lg text-background-300">
-                                    Get economic news delivered directly to your Discord server with simple commands
+                                    Seamlessly integrate economic news into your Discord community
                                 </p>
                             </div>
                             
-                            {/* Enhanced bot example presentation with animations */}
-                            <div className="relative mx-auto max-w-3xl">
-                                {/* Animated decorative elements */}
-                                <div className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-primary/20 blur-xl animate-pulse"></div>
-                                <div className="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-primary/20 blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-                                
-                                {/* Command input display with typing animation */}
-                                <div className="bg-background-800 text-white p-3 rounded-t-lg border-t border-x border-background-700 max-w-fit mx-auto mb-0 transform transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10">
-                                    <code className="flex items-center gap-2">
-                                        <span className="text-primary font-bold">/</span>
-                                        <span className="typing-animation">today</span>
-                                    </code>
+                            {/* Interactive Discord Experience */}
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                                {/* Left side: Bot image */}
+                                <div className="relative">
+                                    <div className="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-primary/10 blur-xl animate-pulse"></div>
+                                    <div className="relative bg-[#36393f] p-4 rounded-lg border border-background-700 shadow-2xl">
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/50 to-primary animate-shimmer"></div>
+                                        <Image 
+                                            src="/bot-example.png" 
+                                            alt="Discord Bot Example" 
+                                            width={600} 
+                                            height={800} 
+                                            className="rounded-md mx-auto"
+                                            priority
+                                        />
+                                    </div>
                                 </div>
                                 
-                                {/* Main image with frame and hover effects */}
-                                <div className="bg-[#36393f] p-4 rounded-lg border border-background-700 shadow-2xl relative transition-all duration-500 hover:shadow-primary/20 hover:shadow-xl">
-                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/50 to-primary animate-shimmer"></div>
-                                    <Image 
-                                        src="/bot-example.png" 
-                                        alt="Discord Bot Example" 
-                                        width={600} 
-                                        height={800} 
-                                        className="rounded-md mx-auto transform transition-all duration-700 hover:scale-[1.02]"
-                                        priority
-                                    />
+                                {/* Right side: User journey */}
+                                <div className="space-y-8">
+                                    <h3 className="text-2xl font-bold text-white">How It Works</h3>
                                     
-                                    {/* Discord-like footer with fade-in */}
-                                    <div className="mt-3 flex items-center justify-between text-xs text-background-400 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                                        <span>Powered by Xylex.ai</span>
-                                        <span>Economic Calendar Bot</span>
+                                    {/* Step 1 */}
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center mr-4">
+                                            <span className="text-primary font-bold">1</span>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-lg font-medium text-white">Invite the Bot</h4>
+                                            <p className="mt-1 text-background-300">
+                                                Add the Economic Calendar Bot to your Discord server with a single click. No complex setup required.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Step 2 */}
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center mr-4">
+                                            <span className="text-primary font-bold">2</span>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-lg font-medium text-white">Use Simple Commands</h4>
+                                            <p className="mt-1 text-background-300">
+                                                Type <code className="bg-background-800 px-1.5 py-0.5 rounded text-primary">/today</code>, <code className="bg-background-800 px-1.5 py-0.5 rounded text-primary">/tomorrow</code>, or <code className="bg-background-800 px-1.5 py-0.5 rounded text-primary">/week</code> to instantly get economic news.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Step 3 */}
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center mr-4">
+                                            <span className="text-primary font-bold">3</span>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-lg font-medium text-white">Set Up Automated Delivery</h4>
+                                            <p className="mt-1 text-background-300">
+                                                Configure the bot to automatically post updates at specific times with <code className="bg-background-800 px-1.5 py-0.5 rounded text-primary">/create-schedule</code>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* CTA Button */}
+                                    <div className="pt-4">
+                                        <a href="#" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-background-900 bg-primary hover:bg-primary/90 transition-colors">
+                                            Add to Discord
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </a>
                                     </div>
                                 </div>
-                                
-                                {/* Caption with fade-in */}
-                                <p className="text-center text-background-400 mt-4 text-sm animate-fade-in" style={{ animationDelay: '0.7s' }}>
-                                    Real-time economic news delivered directly to your Discord server
-                                </p>
                             </div>
                             
-                            {/* Feature highlights with staggered animations */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center transform transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                                        </svg>
+                            {/* Testimonials/Use Cases */}
+                            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                {/* Use Case 1 */}
+                                <div className="bg-background-800 p-6 rounded-lg border border-background-700 transition-all hover:border-primary/50 hover:shadow-lg">
+                                    <div className="flex items-center mb-4">
+                                        <div className="w-10 h-10 rounded-full bg-[#5865F2] flex items-center justify-center mr-3">
+                                            <span className="text-white font-bold">T</span>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-white font-medium">Trading Communities</h4>
+                                            <p className="text-background-400 text-sm">Discord Server</p>
+                                        </div>
                                     </div>
-                                    <h3 className="text-white font-medium">Real-time Updates</h3>
-                                    <p className="text-background-300 text-sm mt-2">Get economic news as it happens</p>
+                                    <p className="text-background-300">
+                                        &quot;Our members rely on timely economic news to make trading decisions. This bot delivers exactly what we need, when we need it.&quot;
+                                    </p>
                                 </div>
                                 
-                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center transform transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
-                                        </svg>
+                                {/* Use Case 2 */}
+                                <div className="bg-background-800 p-6 rounded-lg border border-background-700 transition-all hover:border-primary/50 hover:shadow-lg">
+                                    <div className="flex items-center mb-4">
+                                        <div className="w-10 h-10 rounded-full bg-[#5865F2] flex items-center justify-center mr-3">
+                                            <span className="text-white font-bold">E</span>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-white font-medium">Economics Students</h4>
+                                            <p className="text-background-400 text-sm">Study Group</p>
+                                        </div>
                                     </div>
-                                    <h3 className="text-white font-medium">Customizable Filters</h3>
-                                    <p className="text-background-300 text-sm mt-2">Filter by currency, impact, and more</p>
+                                    <p className="text-background-300">
+                                        &quot;We set up daily briefings that keep our study group informed about real-world economic events. Perfect for discussions.&quot;
+                                    </p>
                                 </div>
                                 
-                                <div className="bg-background-800 p-4 rounded-lg border border-background-700 text-center transform transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 animate-slide-up" style={{ animationDelay: '0.6s' }}>
-                                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                        </svg>
+                                {/* Use Case 3 */}
+                                <div className="bg-background-800 p-6 rounded-lg border border-background-700 transition-all hover:border-primary/50 hover:shadow-lg">
+                                    <div className="flex items-center mb-4">
+                                        <div className="w-10 h-10 rounded-full bg-[#5865F2] flex items-center justify-center mr-3">
+                                            <span className="text-white font-bold">F</span>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-white font-medium">Financial Analysts</h4>
+                                            <p className="text-background-400 text-sm">Professional Network</p>
+                                        </div>
                                     </div>
-                                    <h3 className="text-white font-medium">Automated Schedules</h3>
-                                    <p className="text-background-300 text-sm mt-2">Set up daily or weekly news updates</p>
+                                    <p className="text-background-300">
+                                        &quot;The ability to filter by impact level and currency helps us focus on the news that matters most to our clients.&quot;
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -145,10 +197,10 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Features Section */}
-                    <div className="bg-background-900 py-16 sm:py-24">
+                    {/* Features Section with refined 3D animations */}
+                    <div className="bg-background-900 py-16 sm:py-24 overflow-hidden">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="text-center">
+                            <div className="text-center animate-fade-in">
                                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                                     Why Choose Our Bot?
                                 </h2>
@@ -158,43 +210,248 @@ export default function Home() {
                             </div>
 
                             <div className="mt-16 grid grid-cols-1 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
-                                {/* Feature 1 */}
-                                <div className="bg-background-800 rounded-xl p-8 border border-background-700 transition-all hover:border-primary hover:shadow-lg hover:shadow-primary/10">
-                                    <div className="h-12 w-12 rounded-md bg-primary flex items-center justify-center mb-6">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-white">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                                        </svg>
+                                {/* Feature 1: Real-Time Economic News */}
+                                <div className="feature-card group">
+                                    <div className="card-content">
+                                        <div className="card-front bg-background-800 rounded-xl p-8 border border-background-700 h-full flex flex-col items-center justify-center">
+                                            <div className="relative w-32 h-32 mb-6">
+                                                {/* Smaller News Feed Animation */}
+                                                <div className="news-feed-3d">
+                                                    {/* Discord-like message container */}
+                                                    <div className="discord-message bg-[#36393f] p-3 rounded-md border-l-4 border-primary shadow-lg transform rotate-y-10 rotate-x-10 translate-z-8">
+                                                        <div className="message-header flex items-center mb-2">
+                                                            <div className="w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center mr-2">
+                                                                <span className="text-[10px] text-white">B</span>
+                                                            </div>
+                                                            <div className="text-white text-[10px] font-medium">Forex Bot</div>
+                                                        </div>
+                                                        <div className="message-title text-white text-[10px] font-medium mb-1">Economic News</div>
+                                                        <div className="message-content">
+                                                            <div className="news-item flex items-center mb-1">
+                                                                <div className="w-3 h-3 mr-1 text-[8px]">USD</div>
+                                                                <div className="h-2 bg-background-700 rounded w-full animate-shimmer"></div>
+                                                            </div>
+                                                            <div className="news-item flex items-center mb-1">
+                                                                <div className="w-3 h-3 mr-1 text-[8px]">EUR</div>
+                                                                <div className="h-2 bg-background-700 rounded w-full animate-shimmer" style={{ animationDelay: '0.2s' }}></div>
+                                                            </div>
+                                                            <div className="news-item flex items-center">
+                                                                <div className="w-3 h-3 mr-1 text-[8px]">GBP</div>
+                                                                <div className="h-2 bg-background-700 rounded w-full animate-shimmer" style={{ animationDelay: '0.4s' }}></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    {/* Live indicator */}
+                                                    <div className="absolute -top-2 -right-2 flex items-center bg-red-500 text-white text-[8px] px-1.5 py-0.5 rounded-full animate-pulse">
+                                                        <span className="w-1.5 h-1.5 bg-white rounded-full mr-1"></span>
+                                                        LIVE
+                                                    </div>
+                                                </div>
                                     </div>
                                     <h3 className="text-xl font-semibold text-white mb-3">Real-Time Economic News</h3>
                                     <p className="text-background-300">
-                                        Get the latest economic news and events straight to your Discord server with simple slash commands. Stay informed about market-moving events.
-                                    </p>
+                                                Get the latest economic news and events straight to your Discord server with simple slash commands.
+                                            </p>
+                                        </div>
+                                        <div className="card-back bg-primary/10 backdrop-blur-sm rounded-xl p-8 border border-primary/30 h-full flex flex-col items-center justify-center">
+                                            <h3 className="text-xl font-semibold text-white mb-3">Real-Time Economic News</h3>
+                                            <ul className="text-background-300 text-left space-y-2">
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    Up-to-the-minute economic data
+                                                </li>
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    Forecasts and previous values
+                                                </li>
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    Impact indicators for each event
+                                                </li>
+                                            </ul>
+                                            <button className="mt-4 px-4 py-2 bg-primary text-background-900 rounded-md font-medium hover:bg-primary/80 transition-colors">
+                                                Learn More
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                {/* Feature 2 */}
-                                <div className="bg-background-800 rounded-xl p-8 border border-background-700 transition-all hover:border-primary hover:shadow-lg hover:shadow-primary/10">
-                                    <div className="h-12 w-12 rounded-md bg-primary flex items-center justify-center mb-6">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-white">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                                {/* Feature 2: Customizable Filters */}
+                                <div className="feature-card group">
+                                    <div className="card-content">
+                                        <div className="card-front bg-background-800 rounded-xl p-8 border border-background-700 h-full flex flex-col items-center justify-center">
+                                            <div className="relative w-32 h-32 mb-6">
+                                                {/* Smaller Filter Control Panel */}
+                                                <div className="filter-control-panel">
+                                                    {/* Main panel */}
+                                                    <div className="panel bg-background-700 rounded-lg p-2 shadow-lg transform rotate-y-5 rotate-x-5 translate-z-4">
+                                                        {/* Panel header */}
+                                                        <div className="panel-header text-white text-[10px] font-medium mb-2 text-center">
+                                                            Filter Controls
+                                                        </div>
+                                                        
+                                                        {/* Currency filter */}
+                                                        <div className="filter-section mb-2">
+                                                            <div className="filter-label text-background-300 text-[8px] mb-1">Currency</div>
+                                                            <div className="filter-options flex gap-1">
+                                                                <div className="option bg-primary/30 px-1 py-0.5 rounded text-[8px] text-white flex items-center justify-center">
+                                                                    USD
+                                                                </div>
+                                                                <div className="option bg-background-600 px-1 py-0.5 rounded text-[8px] text-white flex items-center justify-center">
+                                                                    EUR
+                                                                </div>
+                                                                <div className="option bg-background-600 px-1 py-0.5 rounded text-[8px] text-white flex items-center justify-center">
+                                                                    GBP
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        {/* Impact filter */}
+                                                        <div className="filter-section mb-2">
+                                                            <div className="filter-label text-background-300 text-[8px] mb-1">Impact</div>
+                                                            <div className="filter-options flex gap-1">
+                                                                <div className="option bg-primary/30 px-1 py-0.5 rounded text-[8px] text-white flex items-center justify-center">
+                                                                    <span className="w-2 h-2 bg-red-500 rounded-full mr-0.5"></span>High
+                                                                </div>
+                                                                <div className="option bg-primary/30 px-1 py-0.5 rounded text-[8px] text-white flex items-center justify-center">
+                                                                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-0.5"></span>Med
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        {/* Market filter */}
+                                                        <div className="filter-section">
+                                                            <div className="filter-label text-background-300 text-[8px] mb-1">Market</div>
+                                                            <div className="filter-options flex gap-1">
+                                                                <div className="option bg-primary/30 px-1 py-0.5 rounded text-[8px] text-white flex items-center justify-center">
+                                                                    Forex
+                                                                </div>
+                                                                <div className="option bg-background-600 px-1 py-0.5 rounded text-[8px] text-white flex items-center justify-center">
+                                                                    Crypto
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    {/* Animated cursor */}
+                                                    <div className="cursor absolute w-2 h-2 bg-white rounded-full opacity-70 animate-cursor-move"></div>
+                                                </div>
+                                            </div>
+                                            <h3 className="text-xl font-semibold text-white mb-3">Customizable Filters</h3>
+                                            <p className="text-background-300">
+                                                Filter news by currency, impact level, and market type to get exactly what you need.
+                                            </p>
+                                        </div>
+                                        <div className="card-back bg-primary/10 backdrop-blur-sm rounded-xl p-8 border border-primary/30 h-full flex flex-col items-center justify-center">
+                                            <h3 className="text-xl font-semibold text-white mb-3">Customizable Filters</h3>
+                                            <ul className="text-background-300 text-left space-y-2">
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    Filter by currency (USD, EUR, GBP, etc.)
+                                                </li>
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    Filter by impact level (High, Medium, Low)
+                                                </li>
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
+                                                    Filter by market type (Forex, Crypto, etc.)
+                                                </li>
+                                            </ul>
+                                            <button className="mt-4 px-4 py-2 bg-primary text-background-900 rounded-md font-medium hover:bg-primary/80 transition-colors">
+                                                Learn More
+                                            </button>
+                                        </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold text-white mb-3">News Alerts (Coming Soon)</h3>
-                                    <p className="text-background-300">
-                                        Get notified before important economic news is released. Set up custom alerts for specific currencies or high-impact events.
-                                    </p>
                                 </div>
 
-                                {/* Feature 3 */}
-                                <div className="bg-background-800 rounded-xl p-8 border border-background-700 transition-all hover:border-primary hover:shadow-lg hover:shadow-primary/10">
-                                    <div className="h-12 w-12 rounded-md bg-primary flex items-center justify-center mb-6">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 text-white">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122" />
+                                {/* Feature 3: Automated Schedules - Fixed Clock */}
+                                <div className="feature-card group">
+                                    <div className="card-content">
+                                        <div className="card-front bg-background-800 rounded-xl p-8 border border-background-700 h-full flex flex-col items-center justify-center">
+                                            <div className="relative w-32 h-32 mb-6">
+                                                {/* Fixed Clock Animation */}
+                                                <div className="clock-container">
+                                                    {/* Clock face */}
+                                                    <div className="clock-face bg-[#2d2f36] rounded-full w-28 h-28 mx-auto relative border-4 border-background-700 shadow-lg">
+                                                        {/* Clock markings */}
+                                                        <div className="clock-markings">
+                                                            <div className="marking marking-12 absolute top-2 left-1/2 transform -translate-x-1/2 w-1 h-2 bg-white"></div>
+                                                            <div className="marking marking-3 absolute right-2 top-1/2 transform -translate-y-1/2 w-2 h-1 bg-white"></div>
+                                                            <div className="marking marking-6 absolute bottom-2 left-1/2 transform -translate-x-1/2 w-1 h-2 bg-white"></div>
+                                                            <div className="marking marking-9 absolute left-2 top-1/2 transform -translate-y-1/2 w-2 h-1 bg-white"></div>
+                                                        </div>
+                                                        
+                                                        {/* Fixed Clock numbers */}
+                                                        <div className="absolute top-3 left-1/2 transform -translate-x-1/2 text-white text-[8px]">12</div>
+                                                        <div className="absolute top-1/2 right-3 transform translate-y-[-50%] text-white text-[8px]">3</div>
+                                                        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white text-[8px]">6</div>
+                                                        <div className="absolute top-1/2 left-3 transform translate-y-[-50%] text-white text-[8px]">9</div>
+                                                        
+                                                        {/* Clock hands */}
+                                                        <div className="clock-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-primary rounded-full z-10"></div>
+                                                        <div className="clock-hour absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 origin-center w-1 h-8 bg-white rounded-full animate-clock-hour"></div>
+                                                        <div className="clock-minute absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 origin-center w-0.5 h-10 bg-primary rounded-full animate-clock-minute"></div>
+                                                        <div className="clock-second absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 origin-center w-0.5 h-12 bg-red-500 rounded-full animate-clock-second"></div>
+                                                    </div>
+                                                    
+                                                    {/* Schedule notification */}
+                                                    <div className="schedule-notification absolute -top-2 -right-2 bg-background-800 text-white text-[8px] p-1.5 rounded border border-primary animate-float shadow-lg">
+                                                        <div className="flex items-center gap-1 mb-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-2 w-2 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                                                            </svg>
+                                                            <span>Daily Update</span>
+                                                        </div>
+                                                        <div className="text-primary font-medium">08:00 AM</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3 className="text-xl font-semibold text-white mb-3">Automated Schedules</h3>
+                                            <p className="text-background-300">
+                                                Set up automated news delivery on your preferred schedule to keep your server informed.
+                                            </p>
+                                        </div>
+                                        <div className="card-back bg-primary/10 backdrop-blur-sm rounded-xl p-8 border border-primary/30 h-full flex flex-col items-center justify-center">
+                                            <h3 className="text-xl font-semibold text-white mb-3">Automated Schedules</h3>
+                                            <ul className="text-background-300 text-left space-y-2">
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    Daily, weekday, or weekend schedules
+                                                </li>
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    Customizable delivery times
+                                                </li>
+                                                <li className="flex items-center">
+                                                    <svg className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
+                                                    Multiple schedules per server
+                                                </li>
+                                            </ul>
+                                            <button className="mt-4 px-4 py-2 bg-primary text-background-900 rounded-md font-medium hover:bg-primary/80 transition-colors">
+                                                Learn More
+                                            </button>
+                                        </div>
                                     </div>
-                                    <h3 className="text-xl font-semibold text-white mb-3">Scheduled Updates</h3>
-                                    <p className="text-background-300">
-                                        Automatically post economic news and events to your Discord server on a schedule. Morning and evening summaries keep everyone informed.
-                                    </p>
                                 </div>
                             </div>
                         </div>
