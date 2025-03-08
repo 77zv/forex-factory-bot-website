@@ -158,7 +158,7 @@ export default function Home() {
                     </div>
 
                     {/* Discord Preview Section - Redesigned */}
-                    <div className="bg-background-900 py-16 sm:py-24">
+                    <div className="bg-background-900">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="text-center mb-12">
                                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
