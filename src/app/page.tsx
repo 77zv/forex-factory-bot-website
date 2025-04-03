@@ -117,7 +117,7 @@ export default function Home() {
                 {/* Enhanced CTA buttons with hover effects */}
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
-                    href="#"
+                    href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
                     className="group relative overflow-hidden rounded-md bg-primary px-6 py-3 text-sm font-semibold text-background-900 shadow-sm transition-all duration-300 hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   >
                     <span className="absolute inset-0 w-0 bg-white/20 transition-all duration-300 group-hover:w-full"></span>
@@ -1015,7 +1015,7 @@ export default function Home() {
                 >
                   <div className="flex flex-col gap-4 sm:flex-row">
                     <Link
-                      href="https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"
+                      href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
                       className="inline-flex transform items-center justify-center rounded-xl border border-transparent bg-primary px-6 py-4 text-base font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary-600 hover:shadow-primary/30"
                     >
                       <svg

@@ -18,7 +18,7 @@ const tabs: Tab[] = [
     {name: "Home", href: "/"},
     {
         name: "Invite",
-        href: "https://discord.com/api/oauth2/authorize?client_id=1083815375352901716&permissions=274877910016&scope=bot"
+        href: "https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
     },
     {name: "Support", href: "https://discord.gg/exgDv6nv"},
     {name: "Premium (Coming Soon)", href: "/Premium"},
