@@ -9,11 +9,11 @@
 
 import { initTRPC, TRPCError } from "@trpc/server";
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
-import { type Session } from "next-auth";
+import { type Session } from "better-auth";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
-import { getSessionCookie} from "better-auth/cookies"
+import { getSessionCookie } from "better-auth/cookies";
 import { prisma } from "~/server/db";
 
 /**
@@ -45,6 +45,16 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
   };
 };
 
+// Helper function to adapt NextApiRequest to the format expected by getSessionCookie
+const getSessionFromRequest = (req: CreateNextContextOptions["req"]) => {
+  // Create a Headers object from the request cookies
+  const headers = new Headers();
+  if (req.headers.cookie) {
+    headers.set("cookie", req.headers.cookie);
+  }
+  return getSessionCookie(headers);
+};
+
 /**
  * This is the actual context you will use in your router. It will be used to process every request
  * that goes through your tRPC endpoint.
@@ -55,10 +65,11 @@ export const createTRPCContext = (opts: CreateNextContextOptions) => {
   const { req, res } = opts;
 
   // Get the session from the server using the getServerSession wrapper function
-  const session = getSessionCookie(req);
+  const session = getSessionFromRequest(req);
 
   return createInnerTRPCContext({
     session,
+    prisma,
   });
 };
 
