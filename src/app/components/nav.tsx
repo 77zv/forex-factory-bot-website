@@ -55,71 +55,59 @@ const Nav = () => {
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-3' : 'py-5'}`}>
-            <div className={`transition-all duration-300 ${scrolled ? 'bg-background-900/80 backdrop-blur-lg shadow-lg' : 'bg-background-900/60 backdrop-blur-sm'}`}>
+            <div className={`transition-all duration-300 ${scrolled ? 'bg-background-900/95 backdrop-blur-lg shadow-lg' : 'bg-background-900/90 backdrop-blur-md'}`}>
                 <nav className={"relative mx-auto flex max-w-7xl items-center justify-between px-6"}>
-                    <div className={"flex flex-1 items-center"}>
-                        <div className={"flex w-full items-center justify-between lg:w-auto"}>
-                            <Link href={"/"} className="group">
-                                <span className={"sr-only"}>Forex Factory</span>
-                                <div className="relative overflow-hidden">
-                                    <motion.div
-                                        whileHover={{ scale: 1.05 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                    >
-                                        <Image 
-                                            src={"/forexfactory-logo.png"} 
-                                            className={"h-10 w-auto sm:h-14 transition-all duration-300"} 
-                                            alt={"ForexFactory Logo"}
-                                            width={100}
-                                            height={40}
-                                        />
-                                    </motion.div>
-                                </div>
-                            </Link>
-                            <div className={"-mr-2 ml-auto flex items-center lg:hidden"}>
-                                {/* Mobile menu button */}
-                                <motion.button
-                                    whileTap={{ scale: 0.95 }}
-                                    className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-background-800/80 p-2 text-background-300 hover:text-white hover:bg-background-700 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
-                                    type="button"
-                                    onClick={() => {
-                                        setIsOpen(!isOpen)
-                                    }}
+                    {/* Logo section - left aligned */}
+                    <div className={"w-1/4 flex justify-start"}>
+                        <Link href={"/"} className="group">
+                            <span className={"sr-only"}>Forex Factory</span>
+                            <div className="relative overflow-hidden">
+                                <motion.div
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                                 >
-                                    <span className="sr-only">Open main menu</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                         strokeWidth={"1.5"} stroke="currentColor" className="h-7 w-7">
-                                        <path strokeLinecap={"round"} strokeLinejoin={"round"}
-                                              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-                                    </svg>
-                                </motion.button>
+                                    <Image 
+                                        src={"/forexfactory-logo.png"} 
+                                        className={"h-10 w-auto sm:h-14 transition-all duration-300"} 
+                                        alt={"ForexFactory Logo"}
+                                        width={100}
+                                        height={40}
+                                    />
+                                </motion.div>
                             </div>
+                        </Link>
+                    </div>
+                    
+                    {/* Center navigation items */}
+                    <div className="hidden lg:flex lg:w-2/4 lg:items-center lg:justify-center">
+                        <div className="flex items-center justify-center space-x-2">
+                            {tabs.map((tab, index) => {
+                                if (tab.requiresAuth && !session) return null;
+                                return (
+                                    <motion.div 
+                                        key={tab.name} 
+                                        className="relative"
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: index * 0.1 }}
+                                    >
+                                        <Link 
+                                            href={tab.href} 
+                                            aria-current="page"
+                                            className="relative px-4 py-2 text-base font-medium text-white hover:text-primary transition-colors duration-200 rounded-lg group"
+                                        >
+                                            <span className="relative z-10">{tab.name}</span>
+                                            <span className="absolute inset-0 bg-background-800/0 group-hover:bg-background-800/80 rounded-lg transition-all duration-300"></span>
+                                        </Link>
+                                    </motion.div>
+                                );
+                            })}
                         </div>
                     </div>
-                    <div className="hidden lg:flex lg:items-center lg:space-x-1">
-                        {tabs.map((tab, index) => {
-                            if (tab.requiresAuth && !session) return null;
-                            return (
-                                <motion.div 
-                                    key={tab.name} 
-                                    className="relative"
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: index * 0.1 }}
-                                >
-                                    <Link 
-                                        href={tab.href} 
-                                        aria-current="page"
-                                        className="relative px-4 py-2 text-base font-medium text-white hover:text-primary transition-colors duration-200 rounded-lg group"
-                                    >
-                                        <span className="relative z-10">{tab.name}</span>
-                                        <span className="absolute inset-0 bg-background-800/0 group-hover:bg-background-800/50 rounded-lg transition-all duration-300"></span>
-                                    </Link>
-                                </motion.div>
-                            );
-                        })}
+                    
+                    {/* Auth button on right */}
+                    <div className="hidden lg:flex lg:w-1/4 lg:justify-end">
                         <motion.div 
-                            className="ml-4"
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: tabs.length * 0.1 }}
@@ -141,6 +129,25 @@ const Nav = () => {
                             </motion.button>
                         </motion.div>
                     </div>
+                    
+                    {/* Mobile menu button */}
+                    <div className={"lg:hidden flex justify-end"}>
+                        <motion.button
+                            whileTap={{ scale: 0.95 }}
+                            className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-background-800/80 p-2 text-background-300 hover:text-white hover:bg-background-700 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
+                            type="button"
+                            onClick={() => {
+                                setIsOpen(!isOpen)
+                            }}
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                 strokeWidth={"1.5"} stroke="currentColor" className="h-7 w-7">
+                                <path strokeLinecap={"round"} strokeLinejoin={"round"}
+                                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                            </svg>
+                        </motion.button>
+                    </div>
                 </nav>
             </div>
             {/* Mobile menu, show/hide based on menu state. */}
@@ -153,7 +160,7 @@ const Nav = () => {
                         transition={{ duration: 0.3 }}
                     >
                         <div
-                            className="overflow-hidden rounded-xl bg-background-800/90 backdrop-blur-lg shadow-2xl ring-1 ring-background-700 border border-background-700/50">
+                            className="overflow-hidden rounded-xl bg-background-800/95 backdrop-blur-lg shadow-2xl ring-1 ring-background-700 border border-background-700/50">
                             <div className="flex items-center justify-between px-5 pt-4">
                                 <div>
                                     {/* Keep the logo size consistent with the header */}
@@ -203,7 +210,7 @@ const Nav = () => {
                                                 <Link
                                                     href={tab.href}
                                                     aria-current="page"
-                                                    className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-background-700/50 transition-colors duration-200"
+                                                    className="block rounded-lg px-4 py-3 text-base font-medium text-white hover:bg-background-700/80 transition-colors duration-200"
                                                 >
                                                     {tab.name}
                                                 </Link>
