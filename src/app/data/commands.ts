@@ -5,21 +5,21 @@ export const botCommands: Command[] = [
   {
     name: "today",
     description: "Get today's news and events",
-    usage: "/today [market] [currency] [impact] [timezone] [time_display]",
+    usage: "/today [market] [currency] [impact] [timezone]",
     category: "public",
     example: "/today market:Forex currency:USD,EUR impact:High timezone:GMT+1"
   },
   {
     name: "tomorrow",
     description: "Get tomorrow's news and events",
-    usage: "/tomorrow [market] [currency] [impact] [timezone] [time_display]",
+    usage: "/tomorrow [market] [currency] [impact] [timezone]",
     category: "public",
     example: "/tomorrow market:Forex currency:USD,EUR impact:High timezone:GMT+1"
   },
   {
     name: "week",
     description: "Get economic news and events for the current week",
-    usage: "/week [market] [currency] [impact] [timezone] [time_display]",
+    usage: "/week [market] [currency] [impact] [timezone]",
     category: "public",
     example: "/week market:Forex currency:USD,EUR impact:High timezone:GMT+1"
   },
@@ -28,9 +28,9 @@ export const botCommands: Command[] = [
   {
     name: "create-schedule",
     description: "Create a new schedule for automatic news posting",
-    usage: "/create-schedule [hour] [minute] [timezone] [newsscope] [frequency] [impact] [currency] [market] [time_display]",
+    usage: "/create-schedule [hour] [minute] [timezone] [impact] [currency] [market]",
     category: "admin",
-    example: "/create-schedule hour:08 minute:00 timezone:GMT+1 newsscope:Daily frequency:Weekdays"
+    example: "/create-schedule hour:08 minute:00 timezone:GMT+1 impact:High currency:USD,EUR market:Forex"
   },
   {
     name: "delete-schedule",
@@ -49,9 +49,9 @@ export const botCommands: Command[] = [
   {
     name: "edit-schedule",
     description: "Edit an existing schedule",
-    usage: "/edit-schedule [id] [hour] [minute] [timezone] [newsscope] [frequency] [impact] [currency] [market] [time_display]",
+    usage: "/edit-schedule [id] [hour] [minute] [timezone] [impact] [currency] [market]",
     category: "admin",
-    example: "/edit-schedule id:12345 hour:09 minute:30 timezone:GMT-8"
+    example: "/edit-schedule id:12345 hour:09 minute:30 timezone:GMT-8 impact:High currency:USD,EUR market:Forex"
   },
   {
     name: "list-schedules",
