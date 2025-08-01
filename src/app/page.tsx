@@ -137,7 +137,7 @@ export default function Home() {
                   </a>
                 </div>
 
-                {/* Social proof - Updated to 4000+ servers */}
+                {/* Social proof - Updated to 6000+ servers */}
                 <div
                   className="mt-12 flex animate-fade-in items-center gap-x-6 text-sm text-background-400"
                   style={{ animationDelay: "0.8s" }}
@@ -156,7 +156,7 @@ export default function Home() {
                       +
                     </div>
                   </div>
-                  <div>Trusted by 4000+ Discord servers</div>
+                  <div>Trusted by 6000+ Discord servers</div>
                 </div>
               </div>
 
