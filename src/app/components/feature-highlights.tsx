@@ -108,9 +108,14 @@ const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
 
                 {/* CTA Button - positioned at bottom */}
                 <div className="mt-auto">
-                  <button className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg group-hover:shadow-xl">
+                  <a
+                    href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg group-hover:shadow-xl inline-block text-center"
+                  >
                     Try /{command.name}
-                  </button>
+                  </a>
                 </div>
 
                 {/* Hover effect overlay */}
@@ -170,9 +175,14 @@ const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
 
                 {/* CTA Button - positioned at bottom */}
                 <div className="mt-auto">
-                  <button className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg group-hover:shadow-xl">
+                  <a
+                    href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg group-hover:shadow-xl inline-block text-center"
+                  >
                     Manage /{command.name}
-                  </button>
+                  </a>
                 </div>
 
                 {/* Hover effect overlay */}
@@ -197,12 +207,17 @@ const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
             Add our bot to your Discord server and start receiving real-time economic news and events
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
+            >
               Add to Discord
-            </button>
-            <button className="bg-background-700 hover:bg-background-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 border border-background-600">
+            </a>
+            {/* <button className="bg-background-700 hover:bg-background-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 border border-background-600">
               View Documentation
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

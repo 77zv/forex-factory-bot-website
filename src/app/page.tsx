@@ -50,19 +50,6 @@ export default function Home() {
                     <span className="text-background-300">
                       Discord Bot v1.0 Released
                     </span>
-                    <svg
-                      viewBox="0 0 2 2"
-                      className="h-0.5 w-0.5 fill-current text-primary"
-                    >
-                      <circle cx="1" cy="1" r="1" />
-                    </svg>
-                    <a href="#" className="font-medium text-primary">
-                      <span
-                        className="absolute inset-0"
-                        aria-hidden="true"
-                      ></span>
-                      Read more <span aria-hidden="true">&rarr;</span>
-                    </a>
                   </div>
                 </div>
 
@@ -142,7 +129,7 @@ export default function Home() {
                   className="mt-12 flex animate-fade-in items-center gap-x-6 text-sm text-background-400"
                   style={{ animationDelay: "0.8s" }}
                 >
-                  <div className="flex -space-x-2">
+                  {/* <div className="flex -space-x-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-background-900 bg-background-800 text-[10px] text-white">
                       S1
                     </div>
@@ -155,7 +142,7 @@ export default function Home() {
                     <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-background-900 bg-background-800 text-[10px] text-white">
                       +
                     </div>
-                  </div>
+                  </div> */}
                   <div>Trusted by 6000+ Discord servers</div>
                 </div>
               </div>
@@ -329,7 +316,9 @@ export default function Home() {
                   {/* CTA Button */}
                   <div className="pt-4">
                     <a
-                      href="#"
+                      href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center rounded-md border border-transparent bg-primary px-6 py-3 text-base font-medium text-background-900 shadow-sm transition-colors hover:bg-primary/90"
                     >
                       Add to Discord
@@ -346,174 +335,6 @@ export default function Home() {
                         />
                       </svg>
                     </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Testimonials/Use Cases */}
-              <div className="mt-20">
-                <div className="mb-12 text-center">
-                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                    Trusted by Communities
-                  </h2>
-                  <p className="mx-auto mt-4 max-w-2xl text-lg text-background-300">
-                    See how different communities are leveraging our bot to stay
-                    informed
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-                  {/* Use Case 1 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-background-700 bg-gradient-to-br from-background-800 to-background-900 p-8 transition-all duration-300 hover:border-primary hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]">
-                    {/* Decorative element */}
-                    <div className="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-primary/10 blur-xl transition-all duration-500 group-hover:bg-primary/20"></div>
-
-                    <div className="relative mb-6 flex items-center">
-                      <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#5865F2] shadow-lg transition-transform duration-300 group-hover:scale-110">
-                        <span className="text-lg font-bold text-white">T</span>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white">
-                          Trading Communities
-                        </h4>
-                        <p className="flex items-center text-sm text-background-400">
-                          <svg
-                            className="mr-1 h-3 w-3 text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                          Discord Server
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mb-4 rounded-lg border-l-2 border-primary bg-background-800/50 p-4">
-                      <p className="italic text-background-200">
-                        &quot;Our members rely on timely economic news to make
-                        trading decisions. This bot delivers exactly what we
-                        need, when we need it.&quot;
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-background-400">
-                      <span>500+ members</span>
-                      <span className="flex items-center">
-                        <svg
-                          className="mr-1 h-4 w-4 text-yellow-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        5.0/5
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Use Case 2 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-background-700 bg-gradient-to-br from-background-800 to-background-900 p-8 transition-all duration-300 hover:border-primary hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]">
-                    {/* Decorative element */}
-                    <div className="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-primary/10 blur-xl transition-all duration-500 group-hover:bg-primary/20"></div>
-
-                    <div className="relative mb-6 flex items-center">
-                      <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#5865F2] shadow-lg transition-transform duration-300 group-hover:scale-110">
-                        <span className="text-lg font-bold text-white">E</span>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white">
-                          Economics Students
-                        </h4>
-                        <p className="flex items-center text-sm text-background-400">
-                          <svg
-                            className="mr-1 h-3 w-3 text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                          Study Group
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mb-4 rounded-lg border-l-2 border-primary bg-background-800/50 p-4">
-                      <p className="italic text-background-200">
-                        &quot;We set up daily briefings that keep our study
-                        group informed about real-world economic events. Perfect
-                        for discussions.&quot;
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-background-400">
-                      <span>200+ members</span>
-                      <span className="flex items-center">
-                        <svg
-                          className="mr-1 h-4 w-4 text-yellow-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        4.9/5
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Use Case 3 */}
-                  <div className="group relative overflow-hidden rounded-xl border border-background-700 bg-gradient-to-br from-background-800 to-background-900 p-8 transition-all duration-300 hover:border-primary hover:shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)]">
-                    {/* Decorative element */}
-                    <div className="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-primary/10 blur-xl transition-all duration-500 group-hover:bg-primary/20"></div>
-
-                    <div className="relative mb-6 flex items-center">
-                      <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#5865F2] shadow-lg transition-transform duration-300 group-hover:scale-110">
-                        <span className="text-lg font-bold text-white">F</span>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white">
-                          Financial Analysts
-                        </h4>
-                        <p className="flex items-center text-sm text-background-400">
-                          <svg
-                            className="mr-1 h-3 w-3 text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                          Professional Network
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mb-4 rounded-lg border-l-2 border-primary bg-background-800/50 p-4">
-                      <p className="italic text-background-200">
-                        &quot;The ability to filter by impact level and currency
-                        helps us focus on the news that matters most to our
-                        clients.&quot;
-                      </p>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-background-400">
-                      <span>350+ members</span>
-                      <span className="flex items-center">
-                        <svg
-                          className="mr-1 h-4 w-4 text-yellow-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        4.8/5
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>
