@@ -526,22 +526,6 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-background-900 via-background-800 to-background-900">
               <div className="grid-pattern absolute inset-0 opacity-20"></div>
 
-              {/* Animated floating symbols */}
-              <div className="economic-symbols">
-                <div className="symbol symbol-usd">/help</div>
-                <div className="symbol symbol-eur">/news</div>
-                <div className="symbol symbol-gbp">/setup</div>
-                <div className="symbol symbol-jpy">/filter</div>
-                <div className="symbol symbol-chart">/schedule</div>
-                <div className="symbol symbol-chart-down">/status</div>
-              </div>
-
-              {/* Animated glowing orbs */}
-              <div className="absolute left-1/4 top-1/4 h-64 w-64 animate-pulse rounded-full bg-primary/10 blur-[100px]"></div>
-              <div
-                className="absolute bottom-1/4 right-1/4 h-80 w-80 animate-pulse rounded-full bg-blue-500/10 blur-[120px]"
-                style={{ animationDelay: "1s" }}
-              ></div>
             </div>
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
