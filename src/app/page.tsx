@@ -110,18 +110,18 @@ export default function Home() {
                     <span className="absolute inset-0 w-0 bg-white/20 transition-all duration-300 group-hover:w-full"></span>
                     <span className="relative">Add to Discord</span>
                   </a>
-                  <a
-                    href="#"
-                    className="flex items-center text-sm font-semibold leading-6 text-white transition-colors duration-300 hover:text-primary"
-                  >
-                    Learn more{" "}
-                    <span
-                      aria-hidden="true"
-                      className="ml-1 transition-transform duration-300 group-hover:translate-x-1"
-                    >
-                      →
-                    </span>
-                  </a>
+                                     <a
+                     href="#commands"
+                     className="flex items-center text-sm font-semibold leading-6 text-white transition-colors duration-300 hover:text-primary"
+                   >
+                     Learn more{" "}
+                     <span
+                       aria-hidden="true"
+                       className="ml-1 transition-transform duration-300 group-hover:translate-x-1"
+                     >
+                       →
+                     </span>
+                   </a>
                 </div>
 
                 {/* Social proof - Updated to 6000+ servers */}
@@ -341,8 +341,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Command Showcase Section */}
-          <div className="relative overflow-hidden py-20 sm:py-28">
+                     {/* Command Showcase Section */}
+           <div id="commands" className="relative overflow-hidden py-20 sm:py-28">
             {/* Animated background elements */}
             <div className="absolute inset-0 bg-gradient-to-b from-background-900 via-background-800 to-background-900">
               <div className="grid-pattern absolute inset-0 opacity-20"></div>
@@ -833,12 +833,12 @@ export default function Home() {
                       </svg>
                       Add to Discord
                     </Link>
-                    <Link
-                      href="#"
-                      className="inline-flex transform items-center justify-center rounded-xl border border-background-600 bg-background-700/80 px-6 py-4 text-base font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-background-600"
-                    >
-                      Learn More
-                    </Link>
+                                         <Link
+                       href="#commands"
+                       className="inline-flex transform items-center justify-center rounded-xl border border-background-600 bg-background-700/80 px-6 py-4 text-base font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-background-600"
+                     >
+                       Learn More
+                     </Link>
                   </div>
                 </div>
               </div>

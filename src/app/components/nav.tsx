@@ -20,7 +20,7 @@ const tabs: Tab[] = [
         name: "Invite",
         href: "https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
     },
-    {name: "Support", href: "https://discord.gg/exgDv6nv"},
+    {name: "Support", href: "https://discord.com/invite/TKrhSG3Fg4"},
     {name: "Dashboard", href: "/dashboard", requiresAuth: true,},
 ];
 
