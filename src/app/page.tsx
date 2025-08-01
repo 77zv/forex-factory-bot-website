@@ -4,7 +4,7 @@ import Link from "next/link";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
 import Image from "next/image";
-import CommandShowcase from "./components/command-showcase";
+import FeatureHighlights from "./components/feature-highlights";
 import { botCommands } from "./data/commands";
 import DiscordPreview, { DiscordEmbed } from "./components/discord-preview";
 
@@ -541,9 +541,9 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Command showcase with enhanced styling */}
+              {/* Feature highlights with enhanced styling */}
               <div className="relative">
-                <CommandShowcase commands={botCommands} />
+                <FeatureHighlights commands={botCommands} />
 
                 {/* Decorative elements */}
                 <div
