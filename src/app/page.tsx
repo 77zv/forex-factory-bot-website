@@ -19,10 +19,9 @@ export default function Home() {
             {/* Animated background elements */}
             <div className="absolute inset-0 -z-10">
               <div className="absolute left-1/4 top-1/4 h-64 w-64 animate-pulse rounded-full bg-primary/5 blur-3xl"></div>
-              <div
-                className="absolute bottom-1/3 right-1/4 h-80 w-80 animate-pulse rounded-full bg-primary/10 blur-3xl"
-                style={{ animationDelay: "1s" }}
-              ></div>
+                              <div
+                  className="absolute bottom-1/3 right-1/4 h-80 w-80 rounded-full bg-primary/10 blur-3xl"
+                ></div>
 
               {/* Animated grid pattern */}
               <div className="absolute inset-0 opacity-20">
@@ -44,8 +43,7 @@ export default function Home() {
               <div className="z-10 mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
                 {/* Animated badge */}
                 <div className="flex">
-                  <div className="relative mb-6 flex animate-fade-in items-center gap-x-2 rounded-full bg-background-800 px-4 py-1 text-sm leading-6 text-white ring-1 ring-primary/20 hover:ring-primary/50">
-                    <span className="animate-ping-slow absolute inset-0 rounded-full bg-primary/10"></span>
+                                  <div className="relative mb-6 flex items-center gap-x-2 rounded-full bg-background-800 px-4 py-1 text-sm leading-6 text-white ring-1 ring-primary/20 hover:ring-primary/50">
                     <span className="font-semibold text-primary">New</span>
                     <span className="text-background-300">
                       Discord Bot v1.0 Released
@@ -55,37 +53,22 @@ export default function Home() {
 
                 {/* Enhanced headline with improved gradient text */}
                 <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                  <span
-                    className="inline-block animate-slide-up"
-                    style={{ animationDelay: "0.1s" }}
-                  >
+                  <span>
                     Stay
                   </span>{" "}
-                  <span
-                    className="inline-block animate-slide-up"
-                    style={{ animationDelay: "0.2s" }}
-                  >
+                  <span>
                     informed
                   </span>{" "}
-                  <span
-                    className="inline-block animate-slide-up"
-                    style={{ animationDelay: "0.3s" }}
-                  >
+                  <span>
                     with
                   </span>{" "}
-                  <span
-                    className="inline-block animate-slide-up"
-                    style={{ animationDelay: "0.4s" }}
-                  >
+                  <span>
                     {/* Option 1: Teal to Blue gradient (similar to your original) */}
                     <span className="bg-gradient-to-r from-primary via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                       Economic
                     </span>
                   </span>{" "}
-                  <span
-                    className="inline-block animate-slide-up"
-                    style={{ animationDelay: "0.5s" }}
-                  >
+                  <span>
                     <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-primary bg-clip-text text-transparent">
                       News
                     </span>
@@ -126,8 +109,7 @@ export default function Home() {
 
                 {/* Social proof - Updated to 6000+ servers */}
                 <div
-                  className="mt-12 flex animate-fade-in items-center gap-x-6 text-sm text-background-400"
-                  style={{ animationDelay: "0.8s" }}
+                  className="mt-12 flex items-center gap-x-6 text-sm text-background-400"
                 >
                   {/* <div className="flex -space-x-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-background-900 bg-background-800 text-[10px] text-white">
@@ -150,8 +132,7 @@ export default function Home() {
               {/* 3D Discord Bot Mockup with example image */}
               <div className="z-10 mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
                 <div
-                  className="perspective-container relative mx-auto w-[350px] animate-fade-in text-white"
-                  style={{ animationDelay: "0.6s" }}
+                  className="perspective-container relative mx-auto w-[350px] text-white"
                 >
                   <div className="discord-bot-mockup">
                     {/* Discord window frame with Mac-style tabs */}
@@ -351,7 +332,7 @@ export default function Home() {
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
               {/* Section header with animation */}
-              <div className="mb-12 animate-fade-in text-center">
+              <div className="mb-12 text-center">
                 <h2 className="mb-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                   <span className="animated-gradient-text">
                     Powerful Discord Commands
@@ -385,7 +366,7 @@ export default function Home() {
           {/* Features Section with refined 3D animations */}
           <div className="overflow-hidden bg-background-900 py-16 sm:py-24">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="animate-fade-in text-center">
+              <div className="text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                   Why Choose Our Bot?
                 </h2>
@@ -429,19 +410,17 @@ export default function Home() {
                                 <div className="mr-1 h-3 w-3 text-[8px]">
                                   EUR
                                 </div>
-                                <div
-                                  className="h-2 w-full animate-shimmer rounded bg-background-700"
-                                  style={{ animationDelay: "0.2s" }}
-                                ></div>
+                                                <div
+                  className="h-2 w-full rounded bg-background-700"
+                ></div>
                               </div>
                               <div className="news-item flex items-center">
                                 <div className="mr-1 h-3 w-3 text-[8px]">
                                   GBP
                                 </div>
-                                <div
-                                  className="h-2 w-full animate-shimmer rounded bg-background-700"
-                                  style={{ animationDelay: "0.4s" }}
-                                ></div>
+                                                <div
+                  className="h-2 w-full rounded bg-background-700"
+                ></div>
                               </div>
                             </div>
                           </div>
@@ -796,27 +775,24 @@ export default function Home() {
               <div className="transform rounded-3xl border border-background-700/50 bg-background-800/40 px-8 py-12 shadow-[0_10px_50px_rgba(0,0,0,0.3)] backdrop-blur-lg transition-all duration-500 hover:shadow-[0_15px_60px_rgba(var(--primary-rgb),0.2)] sm:px-14 sm:py-20 lg:flex lg:items-center lg:justify-between">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                    <span className="animate-fade-in-up block">
+                    <span className="block">
                       Ready to stay informed?
                     </span>
                     <span
-                      className="animate-fade-in-up mt-2 block text-primary-300"
-                      style={{ animationDelay: "0.3s" }}
+                      className="mt-2 block text-primary-300"
                     >
                       Add the bot to your server today.
                     </span>
                   </h2>
                   <p
-                    className="animate-fade-in-up mt-4 text-lg text-gray-300"
-                    style={{ animationDelay: "0.5s" }}
+                    className="mt-4 text-lg text-gray-300"
                   >
                     Get real-time forex updates and market insights directly in
                     your Discord server.
                   </p>
                 </div>
                 <div
-                  className="animate-fade-in-up mt-10 lg:ml-8 lg:mt-0 lg:flex-shrink-0"
-                  style={{ animationDelay: "0.7s" }}
+                  className="mt-10 lg:ml-8 lg:mt-0 lg:flex-shrink-0"
                 >
                   <div className="flex flex-col gap-4 sm:flex-row">
                     <Link

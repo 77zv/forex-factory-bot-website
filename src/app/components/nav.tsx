@@ -83,12 +83,9 @@ const Nav = () => {
                             {tabs.map((tab, index) => {
                                 if (tab.requiresAuth && !session) return null;
                                 return (
-                                    <motion.div 
+                                    <div 
                                         key={tab.name} 
                                         className="relative"
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: index * 0.1 }}
                                     >
                                         <Link 
                                             href={tab.href} 
@@ -98,7 +95,7 @@ const Nav = () => {
                                             <span className="relative z-10">{tab.name}</span>
                                             <span className="absolute inset-0 bg-background-800/0 group-hover:bg-background-800/80 rounded-lg transition-all duration-300"></span>
                                         </Link>
-                                    </motion.div>
+                                    </div>
                                 );
                             })}
                         </div>
@@ -106,11 +103,7 @@ const Nav = () => {
                     
                     {/* Auth button on right */}
                     <div className="hidden lg:flex lg:w-1/4 lg:justify-end">
-                        <motion.div 
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: tabs.length * 0.1 }}
-                        >
+                        <div>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -126,7 +119,7 @@ const Nav = () => {
                                     </svg>
                                 )}
                             </motion.button>
-                        </motion.div>
+                        </div>
                     </div>
                     
                     {/* Mobile menu button */}
@@ -154,9 +147,6 @@ const Nav = () => {
                 <div className="fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity duration-300">
                     <motion.div 
                         className="absolute inset-x-0 top-0 origin-top p-2 lg:hidden"
-                        initial={{ opacity: 0, y: -50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3 }}
                     >
                         <div
                             className="overflow-hidden rounded-xl bg-background-800/95 backdrop-blur-lg shadow-2xl ring-1 ring-background-700 border border-background-700/50">
@@ -200,11 +190,8 @@ const Nav = () => {
                                     {tabs.map((tab, index) => {
                                         if (tab.requiresAuth && !session) return null;
                                         return (
-                                            <motion.div
+                                            <div
                                                 key={tab.name}
-                                                initial={{ opacity: 0, x: -20 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                transition={{ delay: index * 0.1 }}
                                             >
                                                 <Link
                                                     href={tab.href}
@@ -213,13 +200,10 @@ const Nav = () => {
                                                 >
                                                     {tab.name}
                                                 </Link>
-                                            </motion.div>
+                                            </div>
                                         );
                                     })}
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: tabs.length * 0.1 }}
+                                    <div
                                         className="pt-2"
                                     >
                                         <button
@@ -237,7 +221,7 @@ const Nav = () => {
                                                 </svg>
                                             )}
                                         </button>
-                                    </motion.div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
