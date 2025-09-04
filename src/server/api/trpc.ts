@@ -9,12 +9,13 @@
 
 import { initTRPC, TRPCError } from "@trpc/server";
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
-import { type Session } from "better-auth";
+import { type Session, type User } from "better-auth";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
 import { getSessionCookie } from "better-auth/cookies";
 import { prisma } from "~/server/db";
+import { auth } from "~/server/auth";
 
 /**
  * 1. CONTEXT
@@ -25,7 +26,7 @@ import { prisma } from "~/server/db";
  */
 
 interface CreateContextOptions {
-  session: Session | null;
+  session: { session: Session; user: User } | null;
 }
 
 /**
@@ -45,14 +46,25 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
   };
 };
 
-// Helper function to adapt NextApiRequest to the format expected by getSessionCookie
-const getSessionFromRequest = (req: CreateNextContextOptions["req"]) => {
-  // Create a Headers object from the request cookies
+// Helper function to get session from request
+const getSessionFromRequest = async (req: CreateNextContextOptions["req"]) => {
+  // Create a Headers object from the request headers
   const headers = new Headers();
   if (req.headers.cookie) {
     headers.set("cookie", req.headers.cookie);
   }
-  return getSessionCookie(headers);
+  
+  const sessionToken = getSessionCookie(headers);
+  if (!sessionToken) {
+    return null;
+  }
+  
+  // Get the full session with user data
+  const session = await auth.api.getSession({
+    headers: headers,
+  });
+  
+  return session;
 };
 
 /**
@@ -61,15 +73,14 @@ const getSessionFromRequest = (req: CreateNextContextOptions["req"]) => {
  *
  * @see https://trpc.io/docs/context
  */
-export const createTRPCContext = (opts: CreateNextContextOptions) => {
-  const { req, res } = opts;
+export const createTRPCContext = async (opts: CreateNextContextOptions) => {
+  const { req } = opts;
 
   // Get the session from the server using the getServerSession wrapper function
-  const session = getSessionFromRequest(req);
+  const session = await getSessionFromRequest(req);
 
   return createInnerTRPCContext({
     session,
-    prisma,
   });
 };
 
