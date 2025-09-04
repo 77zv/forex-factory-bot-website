@@ -47,11 +47,21 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
 };
 
 // Helper function to get session from request
-const getSessionFromRequest = async (req: CreateNextContextOptions["req"]) => {
+const getSessionFromRequest = async (req: CreateNextContextOptions["req"] | Request) => {
   // Create a Headers object from the request headers
   const headers = new Headers();
-  if (req.headers.cookie) {
-    headers.set("cookie", req.headers.cookie);
+  
+  if (req instanceof Request) {
+    // App Router Request object
+    const cookieHeader = req.headers.get("cookie");
+    if (cookieHeader) {
+      headers.set("cookie", cookieHeader);
+    }
+  } else {
+    // Pages Router request object
+    if (req.headers.cookie) {
+      headers.set("cookie", req.headers.cookie);
+    }
   }
   
   const sessionToken = getSessionCookie(headers);
@@ -73,8 +83,8 @@ const getSessionFromRequest = async (req: CreateNextContextOptions["req"]) => {
  *
  * @see https://trpc.io/docs/context
  */
-export const createTRPCContext = async (opts: CreateNextContextOptions) => {
-  const { req } = opts;
+export const createTRPCContext = async (opts: CreateNextContextOptions | { req: Request }) => {
+  const req = 'req' in opts ? opts.req : (opts as CreateNextContextOptions).req;
 
   // Get the session from the server using the getServerSession wrapper function
   const session = await getSessionFromRequest(req);

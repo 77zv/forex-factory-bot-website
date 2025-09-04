@@ -1,13 +1,16 @@
-import { createNextApiHandler } from "@trpc/server/adapters/next";
+import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 
 import { env } from "~/env.mjs";
 import { appRouter } from "~/server/api/root";
 import { createTRPCContext } from "~/server/api/trpc";
 
-const handler = createNextApiHandler({
-  router: appRouter,
-  createContext: createTRPCContext,
-  onError:
+const handler = (req: Request) =>
+  fetchRequestHandler({
+    endpoint: "/api/trpc",
+    req,
+    router: appRouter,
+    createContext: () => createTRPCContext({ req }),
+    onError:
       env.NODE_ENV === "development"
         ? ({ path, error }) => {
             console.error(
