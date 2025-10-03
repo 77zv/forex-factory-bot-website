@@ -47,7 +47,9 @@ const createInnerTRPCContext = (opts: CreateContextOptions) => {
 };
 
 // Helper function to get session from request
-const getSessionFromRequest = async (req: CreateNextContextOptions["req"] | Request) => {
+const getSessionFromRequest = async (
+  req: CreateNextContextOptions["req"] | Request,
+): Promise<{ session: Session; user: User } | null> => {
   // Create a Headers object from the request headers
   const headers = new Headers();
   
@@ -74,7 +76,7 @@ const getSessionFromRequest = async (req: CreateNextContextOptions["req"] | Requ
     headers: headers,
   });
   
-  return session;
+  return session as { session: Session; user: User } | null;
 };
 
 /**
