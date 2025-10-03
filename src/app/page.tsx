@@ -334,9 +334,7 @@ export default function Home() {
               {/* Section header with animation */}
               <div className="mb-12 text-center">
                 <h2 className="mb-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  <span className="animated-gradient-text">
                     Powerful Discord Commands
-                  </span>
                 </h2>
                 <p className="mx-auto max-w-3xl text-xl text-background-300">
                   Control economic news delivery with these simple commands
