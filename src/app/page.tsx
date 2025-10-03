@@ -60,7 +60,7 @@ export default function Home() {
                     informed
                   </span>{" "}
                   <span>
-                    with
+                    of
                   </span>{" "}
                   <span>
                     {/* Option 1: Teal to Blue gradient (similar to your original) */}

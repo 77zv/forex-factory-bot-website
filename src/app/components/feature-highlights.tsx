@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import Image from 'next/image';
+ 
 
 export type CommandCategory = 'admin' | 'public';
 
@@ -16,7 +15,6 @@ type FeatureHighlightsProps = {
 };
 
 const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
-  const [hoveredCommand, setHoveredCommand] = useState<string | null>(null);
 
   // Group commands by category
   const publicCommands = commands.filter(cmd => cmd.category === 'public');
@@ -71,8 +69,6 @@ const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
             <div
               key={command.name}
               className={`relative group cursor-pointer transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 h-[420px]`}
-              onMouseEnter={() => setHoveredCommand(command.name)}
-              onMouseLeave={() => setHoveredCommand(null)}
             >
               {/* Background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${getCommandColor(command.category)} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -108,14 +104,13 @@ const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
 
                 {/* CTA Button - positioned at bottom */}
                 <div className="mt-auto">
-                  <a
-                    href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => window.open("https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot", "_blank", "noopener,noreferrer")}
                     className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg group-hover:shadow-xl inline-block text-center"
                   >
                     Try /{command.name}
-                  </a>
+                  </button>
                 </div>
 
                 {/* Hover effect overlay */}
@@ -138,8 +133,6 @@ const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
             <div
               key={command.name}
               className={`relative group cursor-pointer transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 h-[420px]`}
-              onMouseEnter={() => setHoveredCommand(command.name)}
-              onMouseLeave={() => setHoveredCommand(null)}
             >
               {/* Background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${getCommandColor(command.category)} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -175,14 +168,13 @@ const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
 
                 {/* CTA Button - positioned at bottom */}
                 <div className="mt-auto">
-                  <a
-                    href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => window.open("https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot", "_blank", "noopener,noreferrer")}
                     className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg group-hover:shadow-xl inline-block text-center"
                   >
                     Manage /{command.name}
-                  </a>
+                  </button>
                 </div>
 
                 {/* Hover effect overlay */}
@@ -207,14 +199,13 @@ const FeatureHighlights = ({ commands }: FeatureHighlightsProps) => {
             Add our bot to your Discord server and start receiving real-time economic news and events
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => window.open("https://discord.com/oauth2/authorize?client_id=1083815375352901716&permissions=414464789568&integration_type=0&scope=bot", "_blank", "noopener,noreferrer")}
               className="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-block text-center"
             >
               Add to Discord
-            </a>
+            </button>
             {/* <button className="bg-background-700 hover:bg-background-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 border border-background-600">
               View Documentation
             </button> */}
