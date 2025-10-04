@@ -23,10 +23,13 @@
     "baseUrl": ".",
     "paths": {
       "~/*": [
-        "./src/*"
+        "./apps/nextjs/src/*"
       ],
       "@components/*": [
-        "./src/components/*"
+        "./apps/nextjs/src/components/*"
+      ],
+      "@packages/*": [
+        "./packages/*"
       ]
     },
     "plugins": [

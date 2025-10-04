@@ -1,0 +1,129 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model DiscordServer {
+  id        String           @id @default(uuid())
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  guildId   String           @unique
+  schedules Schedule[]
+  channels  DiscordChannel[]
+}
+
+model DiscordChannel {
+  id        String        @id @default(uuid())
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  channelId String        @unique // Discord channel id
+  serverId  String
+  server    DiscordServer @relation(fields: [serverId], references: [guildId])
+  schedules Schedule[]
+}
+
+model Schedule {
+  id               String         @id @default(uuid())
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  timeZone         Timezone       @default(DEFAULT)
+  hour             Int
+  minute           Int
+  hourServerTime   Int
+  minuteServerTime Int
+  timeDisplay      TimeDisplay    @default(FIXED)
+  newsScope        NewsScope
+  frequency        Frequency
+  market           Market
+  impact           Impact[]
+  currency         Currency[]
+  serverId         String
+  server           DiscordServer  @relation(fields: [serverId], references: [guildId])
+  channelId        String
+  channel          DiscordChannel @relation(fields: [channelId], references: [channelId])
+}
+
+enum Market {
+  FOREX
+  CRYPTO
+  ENERGY
+  METAL
+  STOCK
+}
+
+enum Impact {
+  LOW
+  MEDIUM
+  HIGH
+  HOLIDAY
+}
+
+enum Currency {
+  USD
+  EUR
+  GBP
+  JPY
+  CHF
+  AUD
+  CAD
+  CNY
+  NZD
+}
+
+enum NewsScope {
+  DAILY
+  WEEKLY
+  TOMORROW
+}
+
+enum Frequency {
+  DAILY
+  WEEKDAYS
+  WEEKENDS
+  WEEKLY
+}
+
+enum Timezone {
+  DEFAULT
+  GMT_P0
+  GMT_P1
+  GMT_P2
+  GMT_P3
+  GMT_P4
+  GMT_P5
+  GMT_P6
+  GMT_P7
+  GMT_P8
+  GMT_P9
+  GMT_P10
+  GMT_P11
+  GMT_P12
+  GMT_N1
+  GMT_N2
+  GMT_N3
+  GMT_N4
+  GMT_N5
+  GMT_N6
+  GMT_N7
+  GMT_N8
+  GMT_N9
+  GMT_N10
+  GMT_N11
+  GMT_N12
+}
+
+enum TimeDisplay {
+  FIXED
+  RELATIVE
+}

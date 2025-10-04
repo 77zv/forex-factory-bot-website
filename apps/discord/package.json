@@ -1,0 +1,44 @@
+{
+  "name": "noediscord",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "discord:deploy": "tsx src/apps/bot/deploy-commands.ts",
+    "db:migrate": "npx prisma migrate dev --schema=src/packages/db/prisma/schema.prisma",
+    "db:generate": "npx prisma generate --schema=src/packages/db/prisma/schema.prisma",
+    "db:update": "npm run prisma:migrate && npm run prisma:generate",
+    "start": "node dist/index.js",
+    "start:scheduler": "node dist/scheduler.js",
+    "start:all": "pm2 start dist/index.js --name 'discord-bot' && pm2 start dist/scheduler.js --name 'scheduler'",
+    "rabbitmq:start:mac": "brew services start rabbitmq",
+    "rabbitmq:stop:mac": "brew services stop rabbitmq",
+    "rabbitmq:start:linux": "sudo systemctl start rabbitmq-server",
+    "rabbitmq:stop:linux": "sudo systemctl stop rabbitmq-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/node-cron": "^3.0.11",
+    "eslint": "^9.14.0",
+    "prettier": "3.3.3",
+    "prisma": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@prisma/client": "6.0.1",
+    "@types/amqplib": "^0.10.4",
+    "amqplib": "^0.10.3",
+    "dayjs": "^1.11.13",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3"
+  }
+}
