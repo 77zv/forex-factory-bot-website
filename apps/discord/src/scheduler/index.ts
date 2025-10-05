@@ -1,8 +1,8 @@
 import "dotenv/config";
-import { ScheduleService } from "@packages/api/services/schedule.service.js";
-import { NewsService } from "@packages/api/services/news.service.js";
-import { MessageBrokerService } from "@packages/messaging/services/messagebroker.service.js";
-import { Market, NewsScope } from "@packages/api/models/index.js";
+import { ScheduleService } from "@repo/api/services/schedule.service.js";
+import { NewsService } from "@repo/api/services/news.service.js";
+import { MessageBrokerService } from "@repo/messaging/services/messagebroker.service.js";
+import { Market, NewsScope } from "@repo/api/models/index.js";
 import cron from "node-cron";
 
 class SchedulerProcess {

@@ -28,7 +28,7 @@
       "@components/*": [
         "./apps/nextjs/src/components/*"
       ],
-      "@packages/*": [
+      "@repo/*": [
         "./packages/*"
       ]
     },

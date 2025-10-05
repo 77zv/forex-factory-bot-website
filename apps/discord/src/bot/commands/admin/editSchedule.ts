@@ -1,12 +1,12 @@
 import { CommandInteraction, PermissionFlagsBits } from "discord.js";
-import { ScheduleService } from "@packages/api/services/schedule.service.js";
+import { ScheduleService } from "@repo/api/services/schedule.service.js";
 import { buildScheduleConfirmationEmbed } from "@apps/bot/utils/scheduleEmbedBuilder.js";
 import { CommandBuilder } from "@apps/bot/utils/CommandBuilder.js";
 import {
   Impact,
   Currency,
   parseEnumArray
-} from "@packages/api/models/index.js";
+} from "@repo/api/models/index.js";
 
 const scheduleService = ScheduleService.getInstance();
 

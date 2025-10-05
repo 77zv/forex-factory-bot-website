@@ -1,6 +1,6 @@
 import { CommandInteraction } from "discord.js";
-import { Currency, Impact, Timezone, Market, TimeDisplay, parseEnumArray } from '@packages/api/models/index.js'
-import { newsService } from '@packages/api/services/index.js'
+import { Currency, Impact, Timezone, Market, TimeDisplay, parseEnumArray } from '@repo/api/models/index.js'
+import { newsService } from '@repo/api/services/index.js'
 import { buildNewsEmbed } from "@apps/bot/utils/embedBuilder.js"
 import { CommandBuilder } from "@apps/bot/utils/CommandBuilder.js"
 

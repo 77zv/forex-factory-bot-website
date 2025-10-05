@@ -1,0 +1,16 @@
+{
+  "name": "@repo/env",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "env.mjs",
+  "exports": {
+    ".": "./env.mjs"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.6.0",
+    "zod": "^3.21.4"
+  }
+}
+
+

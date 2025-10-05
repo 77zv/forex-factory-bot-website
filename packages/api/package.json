@@ -1,0 +1,32 @@
+{
+  "name": "@repo/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./*": {
+      "import": "./dist/*",
+      "types": "./dist/*"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -w -p tsconfig.json",
+    "check-types": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@repo/db": "workspace:*",
+    "dayjs": "^1.11.13",
+    "@prisma/client": "^6.4.1",
+    "better-auth": "^1.2.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@repo/typescript-config": "workspace:*"
+  }
+}
+
+

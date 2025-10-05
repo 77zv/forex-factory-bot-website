@@ -9,7 +9,7 @@ import {
   StringSelectMenuOptionBuilder,
 } from "discord.js";
 import { getFormattedTime } from "@apps/bot/utils/embedBuilder.js";
-import { ScheduleService } from "@packages/api/services/schedule.service.js";
+import { ScheduleService } from "@repo/api/services/schedule.service.js";
 import { buildScheduleConfirmationEmbed } from "@apps/bot/utils/scheduleEmbedBuilder.js";
 import { PermissionFlagsBits } from "discord.js";
 

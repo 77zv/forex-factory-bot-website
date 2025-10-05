@@ -6,7 +6,7 @@ import {
   ButtonStyle,
   ComponentType
 } from "discord.js";
-import { ScheduleService } from "@packages/api/services/schedule.service.js";
+import { ScheduleService } from "@repo/api/services/schedule.service.js";
 import { PermissionFlagsBits } from "discord.js";
 
 const scheduleService = ScheduleService.getInstance();

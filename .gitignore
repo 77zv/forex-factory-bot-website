@@ -43,3 +43,6 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# node_modules (all workspaces)
+**/node_modules

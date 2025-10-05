@@ -1,5 +1,5 @@
 import { Events, Client } from "discord.js";
-import { SchedulerService } from "@packages/messaging/services/messageConsumer.service.js";
+import { SchedulerService } from "@repo/messaging/services/messageConsumer.service.js";
 
 export const name = Events.ClientReady;
 export const once = true;

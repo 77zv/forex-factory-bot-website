@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@repo/*": ["../../packages/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "src/**/*", "**/*.ts", "**/*.tsx", "../../packages/api/server", "../../packages/api/src/routers", "../../packages/api/src/root.ts", "../../packages/api/src/trpc.ts", "../../packages/api/src/auth.ts"],
+  "exclude": ["node_modules"]
+}
+
+
