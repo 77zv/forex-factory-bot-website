@@ -24,6 +24,7 @@
   "dependencies": {
     "amqplib": "^0.10.3",
     "@repo/api": "workspace:*",
+    "@repo/env": "workspace:*",
     "discord.js": "^14.16.3"
   },
   "devDependencies": {

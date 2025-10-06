@@ -1,15 +1,15 @@
-import { Schedule } from "@repo/api/models/index.js";
-import { CreateScheduleWithoutServerTime } from "@repo/api/repositories/schedule.repository.js";
-import { PrismaScheduleRepository } from "@repo/api/repositories/schedule.repository.js";
-import { UpdateScheduleDTO } from "@repo/api/repositories/schedule.repository.js";
-import { PrismaServerRepository } from "@repo/api/repositories/discordServer.repository.js";
-import { PrismaChannelRepository } from "@repo/api/repositories/discordChannel.repository.js";
+import { Schedule } from "@repo/db/src";
+import { CreateScheduleWithoutServerTime } from "../repositories/schedule.repository.js";
+import { PrismaScheduleRepository } from "../repositories/schedule.repository.js";
+import { UpdateScheduleDTO } from "../repositories/schedule.repository.js";
+import { PrismaServerRepository } from "../repositories/discordServer.repository.js";
+import { PrismaChannelRepository } from "../repositories/discordChannel.repository.js";
 import {
   DiscordChannel,
   DiscordServer,
   Timezone,
-} from "@repo/api/models/index.js";
-import { getIANATimezone } from "@repo/api/utils/timezoneMapping.js";
+} from "@repo/db/src/";
+import { getIANATimezone } from "../utils/timezoneMapping.js";
 import dayjs from "dayjs";
 
 export class ScheduleService {

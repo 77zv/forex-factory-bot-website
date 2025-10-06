@@ -108,6 +108,9 @@ importers:
       '@repo/db':
         specifier: workspace:*
         version: link:../../packages/db
+      '@repo/env':
+        specifier: workspace:*
+        version: link:../../packages/env
       '@repo/messaging':
         specifier: workspace:*
         version: link:../../packages/messaging
@@ -292,6 +295,9 @@ importers:
       '@repo/api':
         specifier: workspace:*
         version: link:../api
+      '@repo/env':
+        specifier: workspace:*
+        version: link:../env
       amqplib:
         specifier: ^0.10.3
         version: 0.10.9

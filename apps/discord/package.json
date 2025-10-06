@@ -36,6 +36,7 @@
     "node-cron": "^3.0.3",
     "@repo/api": "workspace:*",
     "@repo/messaging": "workspace:*",
+    "@repo/env": "workspace:*",
     "@repo/db": "workspace:*"
   }
 }

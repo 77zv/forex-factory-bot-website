@@ -15,7 +15,7 @@ import { ZodError } from "zod";
 
 import { getSessionCookie } from "better-auth/cookies";
 import { prisma } from "@repo/db/src";
-import { auth } from "~/server/auth";
+import { auth } from "./auth";
 
 /**
  * 1. CONTEXT

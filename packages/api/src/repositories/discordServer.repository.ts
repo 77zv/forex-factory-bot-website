@@ -12,7 +12,7 @@ export class PrismaServerRepository {
     return result;
   }
 
-  async findByGuildId(guildId: string): Promise<DiscordServer> {
+  async findByGuildId(guildId: string): Promise<DiscordServer | null> {
     const result = await prisma.discordServer.findUnique({
       where: { guildId },
     });

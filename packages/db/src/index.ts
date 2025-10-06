@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../generated/prisma";
 
 import { env } from "@repo/env/src/env.mjs";
 
@@ -22,3 +22,4 @@ export const prisma =
 if (env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 
 export default prisma;
+export * from "../generated/prisma";

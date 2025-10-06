@@ -1,11 +1,11 @@
-import type { Currency, Impact } from "@prisma/client";
+import type { Currency, Impact } from "@repo/db/src/";
 
 // Re-export enums directly from Prisma
 export type {
   DiscordServer,
   DiscordChannel,
   Schedule,
-} from "@prisma/client";
+} from "@repo/db/src/";
 
 export {
   Market,
@@ -15,7 +15,7 @@ export {
   Frequency,
   Timezone,
   TimeDisplay,
-} from "@prisma/client";
+} from "@repo/db/src/";
 
 export type News = {
   title: string;
