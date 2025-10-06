@@ -11,7 +11,12 @@
     "lint": "turbo run lint",
     "start": "turbo run start",
     "studio": "prisma studio --schema=packages/db/src/schema.prisma",
-    "db:push": "prisma db push"
+    "db:push": "prisma db push",
+    "bot:start": "pnpm --filter discord-bot start",
+    "bot:scheduler": "pnpm --filter discord-bot start:scheduler",
+    "bot:all": "pnpm --filter discord-bot start:all",
+    "bot:deploy": "pnpm --filter discord-bot discord:deploy",
+    "dev:scheduler": "pnpm --filter discord-bot dev:scheduler"
   },
   "dependencies": {
     "@prisma/client": "^6.4.1",

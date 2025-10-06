@@ -286,6 +286,9 @@ importers:
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.1(typescript@5.9.3)(zod@3.25.76)
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.6.1
       zod:
         specifier: ^3.21.4
         version: 3.25.76
