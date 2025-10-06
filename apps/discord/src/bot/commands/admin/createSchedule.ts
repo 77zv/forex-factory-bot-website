@@ -1,7 +1,7 @@
-import { CommandInteraction, ChannelType, PermissionFlagsBits } from "discord.js";
-import { ScheduleService } from "@repo/api/services/schedule.service.js";
-import { buildScheduleConfirmationEmbed } from "@apps/bot/utils/scheduleEmbedBuilder.js";
-import { CommandBuilder } from "@apps/bot/utils/CommandBuilder.js";
+import { ChatInputCommandInteraction, ChannelType, PermissionFlagsBits } from "discord.js";
+import { ScheduleService } from "@repo/api/src/services/schedule.service";
+import { buildScheduleConfirmationEmbed } from "../../utils/scheduleEmbedBuilder";
+import { CommandBuilder } from "../../utils/CommandBuilder";
 import {
   Timezone,
   NewsScope,
@@ -11,7 +11,7 @@ import {
   Market,
   parseEnumArray,
   TimeDisplay
-} from "@repo/api/models/index.js";
+} from "@repo/api/src/models/index";
 
 const scheduleService = ScheduleService.getInstance();
 
@@ -28,7 +28,7 @@ export const data = new CommandBuilder("create-schedule", "Create a new schedule
   // .addTimeDisplayOption()
   .build();
 
-export async function execute(interaction: CommandInteraction) {
+export async function execute(interaction: ChatInputCommandInteraction) {
   if (!interaction.inGuild()) {
     await interaction.reply({
       content: "This command can only be used in a server.",

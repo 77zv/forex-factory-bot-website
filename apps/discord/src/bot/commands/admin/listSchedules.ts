@@ -1,6 +1,6 @@
-import { SlashCommandBuilder, CommandInteraction } from "discord.js";
-import { ScheduleService } from "@repo/api/services/schedule.service.js";
-import { buildScheduleListEmbed } from "@apps/bot/utils/scheduleListEmbedBuilder.js";
+import { SlashCommandBuilder, ChatInputCommandInteraction } from "discord.js";
+import { ScheduleService } from "@repo/api/src/services/schedule.service";
+import { buildScheduleListEmbed } from "../../utils/scheduleListEmbedBuilder";
 import { PermissionFlagsBits } from "discord.js";
 
 const scheduleService = ScheduleService.getInstance();
@@ -10,7 +10,7 @@ export const data = new SlashCommandBuilder()
   .setDescription("List all schedules for this server")
   .setDefaultMemberPermissions(PermissionFlagsBits.Administrator);
 
-export async function execute(interaction: CommandInteraction) {
+export async function execute(interaction: ChatInputCommandInteraction) {
   if (!interaction.inGuild()) {
     await interaction.reply({
       content: "This command can only be used in a server.",

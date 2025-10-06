@@ -1,6 +1,6 @@
 import {
   SlashCommandBuilder,
-  CommandInteraction,
+  ChatInputCommandInteraction,
   ActionRowBuilder,
   ButtonBuilder,
   ButtonStyle,
@@ -8,9 +8,9 @@ import {
   StringSelectMenuBuilder,
   StringSelectMenuOptionBuilder,
 } from "discord.js";
-import { getFormattedTime } from "@apps/bot/utils/embedBuilder.js";
-import { ScheduleService } from "@repo/api/services/schedule.service.js";
-import { buildScheduleConfirmationEmbed } from "@apps/bot/utils/scheduleEmbedBuilder.js";
+import { getFormattedTime } from "../../utils/embedBuilder";
+import { ScheduleService } from "@repo/api/src/services/schedule.service";
+import { buildScheduleConfirmationEmbed } from "../../utils/scheduleEmbedBuilder";
 import { PermissionFlagsBits } from "discord.js";
 
 const scheduleService = ScheduleService.getInstance();
@@ -20,7 +20,7 @@ export const data = new SlashCommandBuilder()
   .setDescription("Delete a schedule")
   .setDefaultMemberPermissions(PermissionFlagsBits.Administrator);
 
-export async function execute(interaction: CommandInteraction) {
+export async function execute(interaction: ChatInputCommandInteraction) {
   if (!interaction.inGuild()) {
     await interaction.reply({
       content: "This command can only be used in a server.",
@@ -99,7 +99,7 @@ export async function execute(interaction: CommandInteraction) {
       });
 
       if (confirmation.customId === "confirm") {
-        const schedule = await scheduleService.deleteSchedule(scheduleId);
+        const schedule = await scheduleService.deleteSchedule(scheduleId!);
         const embed = buildScheduleConfirmationEmbed(schedule, "Deleted");
         await confirmation.update({
           content: "Schedule deleted",

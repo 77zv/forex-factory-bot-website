@@ -1,8 +1,8 @@
-import { CommandInteraction } from "discord.js";
-import { Currency, Impact, Timezone, Market, TimeDisplay, parseEnumArray } from '@repo/api/models/index.js'
-import { newsService } from '@repo/api/services/index.js'
-import { buildNewsEmbed } from "@apps/bot/utils/embedBuilder.js"
-import { CommandBuilder } from "@apps/bot/utils/CommandBuilder.js"
+import { ChatInputCommandInteraction } from "discord.js";
+import { Currency, Impact, Timezone, Market, TimeDisplay, parseEnumArray } from '@repo/api/src/models/index'
+import { newsService } from '@repo/api/src/services/index'
+import { buildNewsEmbed } from "../../utils/embedBuilder"
+import { CommandBuilder } from "../../utils/CommandBuilder"
 
 export const data = new CommandBuilder("today", "Get today's news and events")
   .addMarketOption()
@@ -12,7 +12,7 @@ export const data = new CommandBuilder("today", "Get today's news and events")
   .addTimeDisplayOption()
   .build();
 
-export async function execute(interaction: CommandInteraction) {
+export async function execute(interaction: ChatInputCommandInteraction) {
   const market = interaction.options.get("market")?.value as Market || Market.FOREX;
   const currencyInput = interaction.options.get("currency")?.value as string;
   const impactInput = interaction.options.get("impact")?.value as string;
@@ -30,8 +30,8 @@ export async function execute(interaction: CommandInteraction) {
   });
 
   const embeds = buildNewsEmbed(news, "Forex News Today", timeDisplay);
-  await interaction.reply({ embeds: [embeds[0]] });
+  await interaction.reply({ embeds: [embeds[0]!] });
   for (let i = 1; i < embeds.length; i++) {
-    await interaction.followUp({ embeds: [embeds[i]] });
+    await interaction.followUp({ embeds: [embeds[i]!] });
   }
 }

@@ -1,8 +1,8 @@
 // import { Client, PermissionsBitField, TextChannel } from 'discord.js';
 import { Client, TextChannel } from "discord.js";
 import { buildNewsEmbed } from "@apps/bot/utils/embedBuilder.js";
-import { MessageBrokerService } from "@repo/messaging/index.js";
-import { Currency, Impact } from "@repo/api/models/index.js";
+import { MessageBrokerService } from "../services/messagebroker.service";
+import { Currency, Impact } from "@repo/api/src/models/index.js";
 
 export class SchedulerService {
   private static instance: SchedulerService | null = null;

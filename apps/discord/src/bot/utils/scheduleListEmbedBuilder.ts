@@ -1,5 +1,5 @@
 import { EmbedBuilder } from "discord.js";
-import { Schedule } from "@repo/api/models/index.js";
+import { Schedule } from "@repo/api/src/models/index";
 
 export function buildScheduleListEmbed(schedules: Schedule[]): EmbedBuilder {
   const embed = new EmbedBuilder()

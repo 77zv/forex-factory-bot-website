@@ -292,6 +292,9 @@ importers:
       amqplib:
         specifier: ^0.10.3
         version: 0.10.9
+      discord.js:
+        specifier: ^14.16.3
+        version: 14.22.1
     devDependencies:
       '@repo/typescript-config':
         specifier: workspace:*

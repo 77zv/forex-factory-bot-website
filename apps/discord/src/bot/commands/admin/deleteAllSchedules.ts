@@ -1,12 +1,12 @@
 import { 
   SlashCommandBuilder, 
-  CommandInteraction, 
+  ChatInputCommandInteraction, 
   ActionRowBuilder, 
   ButtonBuilder, 
   ButtonStyle,
   ComponentType
 } from "discord.js";
-import { ScheduleService } from "@repo/api/services/schedule.service.js";
+import { ScheduleService } from "@repo/api/src/services/schedule.service";
 import { PermissionFlagsBits } from "discord.js";
 
 const scheduleService = ScheduleService.getInstance();
@@ -16,7 +16,7 @@ export const data = new SlashCommandBuilder()
   .setDescription("Delete multiple schedules")
   .setDefaultMemberPermissions(PermissionFlagsBits.Administrator);
 
-export async function execute(interaction: CommandInteraction) {
+export async function execute(interaction: ChatInputCommandInteraction) {
   if (!interaction.inGuild()) {
     await interaction.reply({
       content: "This command can only be used in a server.",
