@@ -1,5 +1,5 @@
 import amqp from 'amqplib';
-import type { Schedule, News } from '@repo/api/src/models/index.js';
+import type { Schedule, News } from '@repo/api/src/models/index';
 
 export class MessageBrokerService {
   private static instance: MessageBrokerService | null = null;

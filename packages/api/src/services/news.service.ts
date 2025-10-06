@@ -1,5 +1,5 @@
-import type { News } from "../models/index.js";
-import type { Currency, Impact, Market, Timezone } from "@prisma/client";
+import type { News, Currency, Impact } from "../models/index.js";
+import { Market, Timezone } from "../models/index.js";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
