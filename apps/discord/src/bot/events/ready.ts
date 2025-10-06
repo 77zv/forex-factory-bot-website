@@ -1,5 +1,5 @@
 import { Events, Client } from "discord.js";
-import { MessageBrokerService } from "@repo/messaging/services/messagebroker.service.js";
+import { MessageBrokerService } from "@repo/messaging/src/services/messagebroker.service.js";
 
 export const name = Events.ClientReady;
 export const once = true;
