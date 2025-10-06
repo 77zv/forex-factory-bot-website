@@ -5,6 +5,9 @@ export type {
   DiscordServer,
   DiscordChannel,
   Schedule,
+} from "@prisma/client";
+
+export {
   Market,
   Impact,
   Currency,
