@@ -4,12 +4,12 @@
   "private": true,
   "packageManager": "pnpm@10.0.0",
   "scripts": {
-    "build": "next build",
+    "build": "turbo run build",
     "check-types": "tsc --noEmit",
-    "dev": "next dev",
+    "dev": "turbo run dev",
     "postinstall": "prisma generate --schema=packages/db/src/schema.prisma",
-    "lint": "next lint",
-    "start": "next start",
+    "lint": "turbo run lint",
+    "start": "turbo run start",
     "studio": "prisma studio --schema=packages/db/src/schema.prisma",
     "db:push": "prisma db push"
   },
@@ -44,6 +44,7 @@
     "prettier-plugin-tailwindcss": "^0.5.1",
     "prisma": "^6.4.1",
     "tailwindcss": "^3.3.3",
+    "turbo": "^2.5.8",
     "typescript": "^5.1.6"
   },
   "ct3aMetadata": {
