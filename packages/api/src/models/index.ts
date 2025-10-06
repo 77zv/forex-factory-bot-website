@@ -1,20 +1,18 @@
-import { Currency, Impact, Prisma } from '@prisma/client';
-
-// Export Prisma model types
-export type DiscordServer = Prisma.DiscordServerGetPayload<{}>;
-export type DiscordChannel = Prisma.DiscordChannelGetPayload<{}>;
-export type Schedule = Prisma.ScheduleGetPayload<{}>;
+import type { Currency, Impact } from "@prisma/client";
 
 // Re-export enums directly from Prisma
-export { 
+export type {
+  DiscordServer,
+  DiscordChannel,
+  Schedule,
   Market,
   Impact,
   Currency,
-  NewsScope, 
+  NewsScope,
   Frequency,
   Timezone,
-  TimeDisplay 
-} from '@prisma/client';
+  TimeDisplay,
+} from "@prisma/client";
 
 export type News = {
   title: string;
@@ -23,13 +21,15 @@ export type News = {
   impact: Impact;
   forecast: string;
   previous: string;
-}
+};
 
-
-export function parseEnumArray<T>(input: string | undefined, validValues: T[]): T[] {
+export function parseEnumArray<T>(
+  input: string | undefined,
+  validValues: T[],
+): T[] {
   if (!input) return [];
   return input
-    .split(',')
+    .split(",")
     .map((item) => item.trim().toUpperCase())
     .filter((item) => validValues.includes(item as T)) as T[];
 }

@@ -1,5 +1,5 @@
-import prisma from "@repo/db/src/index.js";
-import { DiscordServer} from '@repo/api/models/index.js'
+import prisma from "@repo/db/src";
+import type { DiscordServer} from '../models'
 
 export type CreateDiscordServerDTO = Omit<DiscordServer, 'id' | 'createdAt' | 'updatedAt'>
 export type UpdateDiscordServerDTO = Partial<CreateDiscordServerDTO>
@@ -12,7 +12,7 @@ export class PrismaServerRepository {
     return result;
   }
 
-  async findByGuildId(guildId: string): Promise<DiscordServer | null> {
+  async findByGuildId(guildId: string): Promise<DiscordServer> {
     const result = await prisma.discordServer.findUnique({
       where: { guildId },
     });

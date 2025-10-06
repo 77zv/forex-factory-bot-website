@@ -1,9 +1,9 @@
-import { News } from "@repo/api/models/index.js";
-import { Currency, Impact, Market, Timezone } from "@prisma/client";
+import type { News } from "../models/index.js";
+import type { Currency, Impact, Market, Timezone } from "@prisma/client";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
-import { getIANATimezone } from "@repo/api/utils/timezoneMapping.js";
+import { getIANATimezone } from "../utils/timezoneMapping.js";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);

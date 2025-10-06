@@ -1,5 +1,5 @@
-import { Schedule } from "@repo/api/models/index.js";
-import prisma from "@repo/db/src/index.js";
+import type { Schedule } from "../models";
+import prisma from "@repo/db/src/";
 
 export type CreateScheduleDTO = Omit<
   Schedule,
@@ -16,6 +16,9 @@ export type CreateScheduleDTOWithServerTime = Omit<
   hourServerTime: number;
   minuteServerTime: number;
 };
+
+
+
 export type UpdateScheduleDTO = Partial<CreateScheduleDTO>;
 
 export class PrismaScheduleRepository {

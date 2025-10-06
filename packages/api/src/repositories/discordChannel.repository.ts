@@ -1,6 +1,6 @@
 import prisma from "@repo/db/src/";
 
-import { DiscordChannel } from '../models'
+import type { DiscordChannel } from '../models'
 
 export type CreateDiscordChannelDTO = Omit<DiscordChannel, 'id' | 'createdAt' | 'updatedAt'>
 export type UpdateDiscordChannelDTO = Partial<CreateDiscordChannelDTO>
