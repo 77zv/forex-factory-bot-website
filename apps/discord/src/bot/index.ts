@@ -14,7 +14,8 @@ console.log('DISCORD_TOKEN:', env.DISCORD_TOKEN ? '✓ Found' : '✗ Not found')
 
 const manager = new ShardingManager(botPath, { 
   token: env.DISCORD_TOKEN,
-  totalShards: "auto"
+  totalShards: "auto",
+  execArgv: ['--import', 'tsx']
 });
 
 manager.on('shardCreate', shard => console.log(`Launched shard ${shard.id}`));

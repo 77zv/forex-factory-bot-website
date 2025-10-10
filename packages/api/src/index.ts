@@ -1,7 +1,7 @@
-export * from "./models/index.js";
-export * from "./services/index.js";
-export * from "./repositories/schedule.repository.js";
-export * from "./repositories/discordServer.repository.js";
-export * from "./repositories/discordChannel.repository.js";
+export * from "./models/index";
+export * from "./services/index";
+export * from "./repositories/schedule.repository";
+export * from "./repositories/discordServer.repository";
+export * from "./repositories/discordChannel.repository";
 
 

@@ -1,9 +1,9 @@
-import type { News, Currency, Impact } from "../models/index.js";
-import { Market, Timezone } from "../models/index.js";
+import type { News, Currency, Impact } from "../models";
+import { Market, Timezone } from "../models";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
-import { getIANATimezone } from "../utils/timezoneMapping.js";
+import { getIANATimezone } from "../utils/timezoneMapping";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);

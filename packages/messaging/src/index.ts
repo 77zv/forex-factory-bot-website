@@ -1,1 +1,1 @@
-export { MessageBrokerService } from './services/messagebroker.service.js';
+export { MessageBrokerService } from './services/messagebroker.service';

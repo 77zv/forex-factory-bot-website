@@ -37,7 +37,7 @@ async function startBot() {
   }
 
   // Load events
-  const eventsPath = path.join(__dirname, 'bot', 'events');
+  const eventsPath = path.join(__dirname, 'events');
   const fileExt = process.env.NODE_ENV === 'development' ? '.ts' : '.js';
   const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith(fileExt));
 
@@ -55,7 +55,7 @@ async function startBot() {
   client.commands = new Collection();
 
   // Load commands
-  const foldersPath = path.join(__dirname, 'bot', 'commands');
+  const foldersPath = path.join(__dirname, 'commands');
   const commandFolders = fs.readdirSync(foldersPath);
 
   for (const folder of commandFolders) {
